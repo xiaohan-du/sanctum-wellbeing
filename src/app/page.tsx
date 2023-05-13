@@ -78,7 +78,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Website built by Xiaohan Du
+          Website built by Xiaohan Du Using Next TS
         </a>
       </div>
     </main>
