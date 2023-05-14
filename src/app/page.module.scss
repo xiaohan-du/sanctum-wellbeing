@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 100vh;
   font-family: var(--font-mono);
   font-weight: 700;
+  margin: 0 auto;
 }
 
 .description {
@@ -14,7 +15,6 @@
   justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
-  max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);

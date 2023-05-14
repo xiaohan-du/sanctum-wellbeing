@@ -2,7 +2,7 @@ import styles from '../page.module.scss'
 export const Navbar = () => {
   return (
     <nav className="bg-white-800 w-full">
-      <div className="flex flex-col justify-between items-center p-6">
+      <div className="flex flex-col justify-between items-center">
         <div className={styles.description}>
           <p>
             COMING SOON...
@@ -18,6 +18,6 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav >
+    </nav>
   )
 }

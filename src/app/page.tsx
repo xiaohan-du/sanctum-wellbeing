@@ -1,14 +1,21 @@
-import styles from './page.module.scss'
-import { Navbar } from './components/navbar'
+import styles from './page.module.scss';
+import { Navbar } from './components/navbar';
+import { Banner } from './components/banner';
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main className={styles.main}>
+      <main className={`${styles.main} max-w-screen-xl`}>
+        <Navbar />
+
         <div className={styles.center}>
           SANCTUM WELLBEING
         </div>
+
+        <Banner
+          title="Introduction"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        />
 
         <div className={styles.grid}>
           <a
@@ -67,7 +74,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Website built by Xiaohan Du Using Next TS
+            Website built by Xiaohan Du Using Next TS and Tailwind CSS
           </a>
         </div>
       </main>
