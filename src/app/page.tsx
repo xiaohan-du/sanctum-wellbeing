@@ -7,10 +7,10 @@ import { igUrls } from './static/data/igUrls';
 export default function Home() {
   return (
     <>
-      <main className={`${styles.main} max-w-screen-xl font-serif font-thin`}>
+      <main className={`${styles.main} max-w-screen-xl font-serif font-thin tracking-normal`}>
         <Navbar />
 
-        <div className={`${styles.center}`}>
+        <div className={`${styles.center} tracking-widest`}>
           SANCTUM WELLBEING
         </div>
 
