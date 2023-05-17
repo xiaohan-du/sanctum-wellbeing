@@ -6,7 +6,7 @@ interface IBanner {
 export const Banner = ({ title, content }: IBanner) => {
   return (
     <div
-      className="h-48 
+      className="h-60 
         w-full 
         relative 
         isolate 
