@@ -10,7 +10,7 @@ interface ICardRow {
 
 export const CardRow = ({ cardRowData }: ICardRow) => {
   return (
-    <div className={`${styles.grid} -mt-20 z-10 bg-white flex flex-row justify-center items-center`}>
+    <div className={`${styles.cardRow} flex flex-row justify-center items-center`}>
       {
         cardRowData.map(({ url, title, content }, index) => (
           <a
