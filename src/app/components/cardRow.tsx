@@ -16,7 +16,7 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
           <a
             key={index}
             href={url}
-            className={`${styles.card} p-4`}
+            className={`${styles.card} px-12 py-4`}
             target="_blank"
             rel="noopener noreferrer"
           >
