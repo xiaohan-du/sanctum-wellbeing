@@ -1,8 +1,6 @@
 'use client'
 
 import styles from './mediaRow.module.scss';
-import Image from 'next/image';
-import logo from '../static/images/logo.jpeg';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { AiOutlineFacebook } from 'react-icons/ai';
 import { AiOutlineInstagram } from 'react-icons/ai';
