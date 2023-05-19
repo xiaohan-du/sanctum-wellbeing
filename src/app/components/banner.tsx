@@ -19,8 +19,7 @@ export const Banner = ({ title, content }: IBanner) => {
         w-screen
         justify-center
         font-sans
-        min-h-500
-        "
+        min-h-500"
     >
       <div className="max-w-screen-xl">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 max-w-screen-xl px-12">

@@ -15,9 +15,14 @@
   }
 
   & h2 {
-    font-weight: 600;
     margin-bottom: 0.7rem;
   }
+}
+
+.cardRow {
+  background-image: linear-gradient(to right, #9089fc, #ff80b5);
+  color: white;
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.4);
 }
 
 /* Enable hover only on non-touch devices */
@@ -44,5 +49,21 @@
     & h2 {
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .cardRow {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .cardRow {
+    grid-template-columns: repeat(2, 50%);
   }
 }

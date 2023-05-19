@@ -10,20 +10,20 @@ interface ICardRow {
 
 export const CardRow = ({ cardRowData }: ICardRow) => {
   return (
-    <div className={`${styles.grid} -mt-20 z-10 bg-white flex flex-row justify-center items-center`}>
+    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-medium tracking-wide`}>
       {
         cardRowData.map(({ url, title, content }, index) => (
           <a
             key={index}
             href={url}
-            className={`${styles.card} px-12 py-4`}
+            className={`${styles.card} px-10 py-4`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2>
               {title} <span>-&gt;</span>
             </h2>
-            <p>{content}</p>
+            <p className='font-normal'>{content}</p>
           </a>
         ))
       }
