@@ -6,6 +6,8 @@ import { igUrls } from './static/data/igUrls';
 import { CardRow } from './components/cardRow';
 import { MediaRow } from './components/mediaRow';
 import { cardRowData } from './static/data/cardRowData';
+import { workplaceData } from './static/data/workplaceData';
+import { coorporateData } from './static/data/coorporateData'
 
 export default function Home() {
   return (
@@ -35,6 +37,26 @@ export default function Home() {
         </div>
         <div className='-mt-28 mb-16 z-10'>
           <CardRow cardRowData={cardRowData} />
+        </div>
+
+        <div className='mb-16'>
+          <Banner
+            title="Sanctum Wellbeing in the Workplace Days"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+          />
+        </div>
+        <div className='-mt-28 mb-16 z-10'>
+          <CardRow cardRowData={workplaceData} />
+        </div>
+
+        <div className='mb-16'>
+          <Banner
+            title="Link / stories to Health Shield/ Deloitte / Transport for Wales / Willows High School"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+          />
+        </div>
+        <div className='-mt-28 mb-16 z-10'>
+          <CardRow cardRowData={coorporateData} />
         </div>
 
         <IgGrid title={'See what my customer says...'} urls={igUrls} />
