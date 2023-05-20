@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         <IgGrid title={'See what my customer says...'} urls={igUrls} />
-        <div>
+        <div className='w-full flex justify-center items-end h-12'>
           <a
             href="https://xiaohan-du.com"
             target="_blank"
