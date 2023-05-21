@@ -1,22 +1,32 @@
+import cnhc from '../images/cnhc.jpeg';
+
 export const cardRowData = [
   {
+    tag: 'reflexology',
     url: 'https://www.aor.org.uk/what-is-reflexology/',
     title: 'Reflexology',
     content: 'Find More',
+    imgUrl: ''
   },
   {
+    tag: 'indian',
     url: 'https://www.onsitemassageco.com/blog/reflexology-can-improve-physical-mental-wellbeing/',
     title: 'Indian Head Massage',
     content: 'Find More',
+    imgUrl: ''
   },
   {
-    url: 'https://www.aor.org.uk/custom/far-search/map.php?lat=51.483707&lng=-3.1680962&country=GB&location=Cardiff%2C+UK&name=Louise+',
-    title: 'AoR Verified',
-    content: 'Find More',
+    tag: 'aor',
+    url: '',
+    title: '',
+    content: '',
+    imgUrl: ''
   },
   {
+    tag: 'cnhc',
     url: 'https://www.cnhc.org.uk/#gsc.tab=0',
-    title: 'CNHC Verified',
-    content: 'Find More',
+    title: '',
+    content: '',
+    imgUrl: cnhc
   }
 ];
