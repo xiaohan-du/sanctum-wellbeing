@@ -1,12 +1,15 @@
 interface IBanner {
   title?: string;
   content?: string;
+  bannerHeight: string;
+  negativeTitleMargin?: string;
 }
 
-export const Banner = ({ title, content }: IBanner) => {
+export const Banner = ({ title, content, bannerHeight, negativeTitleMargin }: IBanner) => {
   return (
     <div
-      className="h-60 
+      className={`
+        ${bannerHeight}
         w-full 
         relative 
         isolate 
@@ -18,12 +21,11 @@ export const Banner = ({ title, content }: IBanner) => {
         py-2.5 
         w-screen
         justify-center
-        font-sans
-        min-h-500"
+        font-sans`}
     >
-      <div className="max-w-screen-xl">
+      <div className={`${negativeTitleMargin} max-w-screen-xl`}>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 max-w-screen-xl px-12">
-          <h1 className="text-3xl">
+          <h1 className='text-3xl'>
             {title}
           </h1>
           <p className="text-lg leading-6 text-gray-900">
