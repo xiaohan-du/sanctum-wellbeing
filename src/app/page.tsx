@@ -4,6 +4,8 @@ import { Banner } from './components/banner';
 import { CardRow } from './components/cardRow';
 import { MediaRow } from './components/mediaRow';
 import { cardRowData } from './static/data/cardRowData';
+import { ReviewBanner } from './components/reviewBanner';
+import { reviewData } from './static/data/reviewData';
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
           <MediaRow />
         </div>
 
+        <ReviewBanner reviewData={reviewData}/>
 
         <div className='mb-16'>
           <Banner
