@@ -1,7 +1,7 @@
 interface IBanner {
   title?: string;
-  content?: string;
-  bannerHeight: string;
+  content?: string[];
+  bannerHeight?: string;
   negativeTitleMargin?: string;
 }
 
@@ -18,19 +18,26 @@ export const Banner = ({ title, content, bannerHeight, negativeTitleMargin }: IB
         gap-x-6 
         overflow-hidden 
         bg-gray-50 
-        py-2.5 
+        py-10
         w-screen
         justify-center
         font-sans`}
     >
       <div className={`${negativeTitleMargin} max-w-screen-xl`}>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 max-w-screen-xl px-12">
+        <div className="flex flex-col flex-wrap items-start gap-x-4 gap-y-2 max-w-screen-xl px-12">
           <h1 className='text-3xl'>
             {title}
           </h1>
-          <p className="text-lg leading-6 text-gray-900">
-            {content}
-          </p>
+          {
+            content?.map((c, i) => {
+              return (
+                <p key={i} className="text-lg leading-6 text-gray-900">
+                  {c}
+                </p>
+              )
+            })
+          }
+
         </div>
         <div className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
           <div className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"

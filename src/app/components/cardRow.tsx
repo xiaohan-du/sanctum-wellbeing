@@ -36,13 +36,13 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
   }, [cardRowData]);
 
   return (
-    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-medium tracking-wide h-56`}>
+    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-medium tracking-wide h-40`}>
       {
         cardRowData.map(({ tag, url, title, content, imgUrl }, index) => (
           <a
             key={index}
             href={url}
-            className={`${styles.card} px-12 h-full flex flex-col justify-center items-center`}
+            className={`${styles.card} px-8 h-full flex flex-col justify-center items-center`}
             target="_blank"
             rel="noopener noreferrer"
             data-id={tag}
@@ -58,7 +58,7 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
 
             {
               imgUrl ? (
-                <Image src={imgUrl} alt="Logo" className='h-36 w-auto' />
+                <Image src={imgUrl} alt="Logo" className='h-28 w-auto' />
               ) : null
             }
           </a>
