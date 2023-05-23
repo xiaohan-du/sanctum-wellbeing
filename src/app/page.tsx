@@ -23,7 +23,9 @@ export default function Home() {
           <MediaRow />
         </div>
 
-        <ReviewBanner reviewData={reviewData}/>
+        <div className='mb-16'>
+          <ReviewBanner reviewData={reviewData} />
+        </div>
 
         <div className='mb-16'>
           <Banner

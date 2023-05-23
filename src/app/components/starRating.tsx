@@ -9,7 +9,7 @@ export const StarRating = ({ rating }: IStarRating) => {
     <div className="flex items-center">
       {Array.from({ length: rating }).map((_, i) => (
         <svg
-          key={`${name}-star-${i.toString()}`}
+          key={`star-${i.toString()}`}
           aria-hidden="true"
           className="w-5 h-5 text-yellow-400"
           fill="currentColor"
