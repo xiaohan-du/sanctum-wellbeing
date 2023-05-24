@@ -6,6 +6,7 @@ import { MediaRow } from './components/mediaRow';
 import { cardRowData } from './static/data/cardRowData';
 import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
+import { mediaRowData } from './static/data/mediaRowData';
 
 export default function Home() {
   return (
@@ -28,14 +29,16 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
+            bannerHeight='h-72'
+            negativeTitleMargin='-mt-4'
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
               "Mobile visits are available. Onsite workplace visits can be arranged to suit your business requirements.",
               "The treatment room has been created for the senses, for you to be indulged with wonderfully scented oils, warm fluffy blankets which are heated on cold days, soft music playing, and comfortable relaxing chairs and beds. Herbal teas and water are provided, and complimentary face masks for during your treatment. Hot water bottles are also to hand should you require one. ",
               "Reflexology balms are created locally by The Apothecary, Canton, they are plant based and infused with wonderfully scented oils. "]}
           />
         </div>
-        <div className='mb-16 z-10'>
-          <MediaRow />
+        <div className='-mt-24 mb-16 z-10'>
+          <MediaRow mediaRowData={mediaRowData} />
         </div>
 
         <div className='mb-16'>
