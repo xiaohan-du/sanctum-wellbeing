@@ -9,13 +9,6 @@ export const cardRowData = [
     imgUrl: ''
   },
   {
-    tag: 'indian',
-    url: 'https://www.onsitemassageco.com/blog/reflexology-can-improve-physical-mental-wellbeing/',
-    title: 'Indian Head Massage',
-    content: 'Find More',
-    imgUrl: ''
-  },
-  {
     tag: 'aor',
     url: '',
     title: '',

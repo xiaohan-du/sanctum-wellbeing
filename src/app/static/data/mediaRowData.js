@@ -1,6 +1,8 @@
 import instagram from '../images/instagram.svg';
 import linkedin from '../images/linkedin.svg';
 import facebook from '../images/facebook.svg';
+import call from '../images/call.svg';
+import email from '../images/email.svg';
 
 export const mediaRowData = [
   {
@@ -17,5 +19,15 @@ export const mediaRowData = [
     url: 'https://www.facebook.com/sanctumwellbeing',
     title: 'Facebook',
     imgUrl: facebook
+  },
+  {
+    url: 'tel:+447852135375',
+    title: 'Mobile',
+    imgUrl: call
+  },
+  {
+    url: 'mailto:info@sanctumwellbeing.co.uk',
+    title: 'Email',
+    imgUrl: email
   }
 ];
