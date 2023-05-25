@@ -8,13 +8,14 @@ export interface IReviewCard {
   content: string;
   rating: number;
   isDecorate?: boolean;
+  linkUrl?: string;
 }
 
-export const ReviewCard = ({ name, content, rating, isDecorate }: IReviewCard) => {
+export const ReviewCard = ({ name, content, rating, isDecorate, linkUrl }: IReviewCard) => {
   return (
     <>
       {!isDecorate ? (
-        <div className="flex flex-col justify-between shadow-lg p-4 rounded-lg m-2 bg-white w-80 h-80">
+        <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between shadow-lg p-4 rounded-lg m-2 bg-white w-80 h-80 hover:shadow-2xl hover:transition-shadow duration-300">
           <div>
             <div className="flex justify-center mb-6">
               <StarRating rating={rating} />
@@ -41,9 +42,9 @@ export const ReviewCard = ({ name, content, rating, isDecorate }: IReviewCard) =
           <div className="flex justify-end">
             <h5 className="text-xl font-semibold mb-4">{name}</h5>
           </div>
-        </div>
+        </a>
       ) : (
-        <div className='flex flex-col justify-center items-center shadow-lg rounded-lg m-2 bg-white w-80 h-80'>
+        <div className='flex flex-col justify-center items-center shadow-lg rounded-lg m-2 bg-white w-80 h-80 hover:shadow-2xl hover:transition-shadow duration-300'>
           <div className='flex flex-col justify-center items-center mt-28'>
             <p className='-mb-44 text-2xl text-center'>Excellent <br /> Reviews</p>
             <Image src={wheat} alt="Logo" className='h-80 w-80' />

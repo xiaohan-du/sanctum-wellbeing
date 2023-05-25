@@ -13,15 +13,11 @@ interface IMediaRow {
 
 export const MediaRow = ({ mediaRowData }: IMediaRow) => {
   const redirectTo = (url: string): void => {
-    window.location.href = url;
+    window.open(url, '_blank');
   };
 
   return (
-    <div className={`${styles.container} font-sans flex flex-row justify-between items-center`}>
-
-      <div className={`${styles.element}`}>
-        Let&#39;s connect!
-      </div>
+    <div className={`${styles.container} font-sans flex flex-row items-center`}>
       {
         mediaRowData.map(({ url, title, imgUrl }, i) => (
           <button key={i} className={`${styles.element}`}
