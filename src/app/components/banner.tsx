@@ -23,7 +23,7 @@ export const Banner = ({ title, content, bannerHeight, negativeTitleMargin }: IB
         justify-center
         font-sans`}
     >
-      <div className={`${negativeTitleMargin} max-w-screen-xl`}>
+      <div className={`${negativeTitleMargin} max-w-screen-xl w-full`}>
         <div className="flex flex-col flex-wrap items-start gap-x-4 gap-y-2 max-w-screen-xl px-12">
           <h1 className='text-3xl'>
             {title}
