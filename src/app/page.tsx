@@ -7,8 +7,9 @@ import { cardRowData } from './static/data/cardRowData';
 import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
-import { VoucherRow } from './components/voucherRow';
+import { PriceRow } from './components/priceRow';
 import { voucherRowData } from './static/data/voucherRowData';
+import { priceRowData } from './static/data/priceRowData';
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
-            bannerHeight='h-72'
+            bannerHeight='h-80'
             negativeTitleMargin='-mt-4'
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
               "Mobile visits are available. Onsite workplace visits can be arranged to suit your business requirements.",
@@ -56,7 +57,24 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
+            title="Treatments and Prices"
+            negativeTitleMargin='-mt-4'
+            content={[
+              "Indian Head Massage includes the back, shoulders, neck, arms, face and head. This treatment can be done clothed or you may wish to remove your upper garments to allow me to apply oil to the skin and apply firmer pressure to the muscles depending upon how tense you are, and what you need. Wraps are provided for you",
+              "The Ultimate is a combination of Indian Head Massage, Hand and Feet Reflexology. This is the ultimate super relaxing and stress busting treatment",
+              "Mobile treatments in Cardiff are available where I come and set up in the comfort of your own home. Outside Cardiff a fee to cover travel cost will be incurred. "
+            ]}
+          />
+        </div>
+        <div className='-mt-24 mb-16 z-10'>
+          <PriceRow priceRowData={priceRowData}/>
+        </div>
+
+        <div className='mb-16'>
+          <Banner
             title="Gift Vouchers"
+            bannerHeight='h-52'
+            negativeTitleMargin='-mt-4'
             content={[
               "Wondering what to get friends and loved ones for all those special occasions throughout the year? Then treat them to a perfect treatment! ",
               "Contact me on 07852 135375 or info@sanctumwellbeing.co.uk to buy a gift voucher, which will then be sent by post or digitally. "
@@ -64,7 +82,17 @@ export default function Home() {
           />
         </div>
         <div className='-mt-24 mb-16 z-10'>
-          <VoucherRow voucherRowData={voucherRowData}/>
+          <PriceRow priceRowData={voucherRowData}/>
+        </div>
+
+        <div className='mb-16'>
+          <Banner
+            title="Health Cash Plans"
+            subtitle=' - Do you have a Health Shield , Simply Health, BHSF or similar health cash plan?'
+            content={[
+              "Depending or your policy and level of cover, you could be reimbursed the cost of treatments. Do check your policy or contact your provider first. Please contact me if you need further information.",
+            ]}
+          />
         </div>
 
         <div className='mb-16'>

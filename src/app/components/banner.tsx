@@ -1,11 +1,12 @@
 interface IBanner {
   title?: string;
+  subtitle?: string;
   content?: string[];
   bannerHeight?: string;
   negativeTitleMargin?: string;
 }
 
-export const Banner = ({ title, content, bannerHeight, negativeTitleMargin }: IBanner) => {
+export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMargin }: IBanner) => {
   return (
     <div
       className={`
@@ -25,8 +26,11 @@ export const Banner = ({ title, content, bannerHeight, negativeTitleMargin }: IB
     >
       <div className={`${negativeTitleMargin} max-w-screen-xl w-full`}>
         <div className="flex flex-col flex-wrap items-start gap-x-4 gap-y-2 max-w-screen-xl px-12">
-          <h1 className='text-3xl'>
+          <h1 className='text-4xl'>
             {title}
+          </h1>
+          <h1 className='text-2xl italic'>
+            {subtitle}
           </h1>
           {
             content?.map((c, i) => {
