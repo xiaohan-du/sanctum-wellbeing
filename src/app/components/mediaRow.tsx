@@ -2,6 +2,7 @@
 
 import styles from './mediaRow.module.scss';
 import Image from 'next/image';
+import { redirectTo } from '../functions/redirectTo';
 
 interface IMediaRow {
   mediaRowData: Array<{
@@ -12,18 +13,15 @@ interface IMediaRow {
 }
 
 export const MediaRow = ({ mediaRowData }: IMediaRow) => {
-  const redirectTo = (url: string): void => {
-    window.open(url, '_blank');
-  };
 
   return (
     <div className={`${styles.container} font-sans flex flex-row items-center`}>
       {
         mediaRowData.map(({ url, title, imgUrl }, i) => (
           <button key={i} className={`${styles.element}`}
-            onClick={() => redirectTo(url)}
+            onClick={() => redirectTo(url, false)}
           >
-            <Image src={imgUrl} alt="instagram" className='h-12 w-auto mr-1' />
+            <Image src={imgUrl} alt="icons" className='h-12 w-auto mr-1' />
             <span className='mr-1'>{title}</span>
           </button>
         ))

@@ -7,6 +7,8 @@ import { cardRowData } from './static/data/cardRowData';
 import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
+import { VoucherRow } from './components/voucherRow';
+import { voucherRowData } from './static/data/voucherRowData';
 
 export default function Home() {
   return (
@@ -57,10 +59,12 @@ export default function Home() {
             title="Gift Vouchers"
             content={[
               "Wondering what to get friends and loved ones for all those special occasions throughout the year? Then treat them to a perfect treatment! ",
-              "Vouchers are available for Reflexology 60 min treatment £45 or Indian Head Massage 45 min treatment £40, or ‘The Ultimate’ a 90 min treatment £75 combining both Indian Head Massage and Reflexology. ",
               "Contact me on 07852 135375 or info@sanctumwellbeing.co.uk to buy a gift voucher, which will then be sent by post or digitally. "
             ]}
           />
+        </div>
+        <div className='-mt-24 mb-16 z-10'>
+          <VoucherRow voucherRowData={voucherRowData}/>
         </div>
 
         <div className='mb-16'>
