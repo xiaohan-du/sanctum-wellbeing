@@ -10,13 +10,14 @@ import { mediaRowData } from './static/data/mediaRowData';
 import { PriceRow } from './components/priceRow';
 import { voucherRowData } from './static/data/voucherRowData';
 import { priceRowData } from './static/data/priceRowData';
+import { ContactRow } from './components/contactRow';
 
 export default function Home() {
   return (
     <>
       <main className={`${styles.main} max-w-screen-xl font-serif font-thin tracking-normal`}>
         <MainBanner />
-
+        <ContactRow />
         <div className='mb-16'>
           <Banner
             title="About Me"

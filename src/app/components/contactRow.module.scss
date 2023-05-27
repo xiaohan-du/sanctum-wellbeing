@@ -1,0 +1,28 @@
+.container {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  
+  & span {
+    display: inline-block;
+    transition: transform 200ms;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .element:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    border-radius: 0.5rem;
+    & span {
+      transform: translateX(2px);
+    }
+  }
+}
