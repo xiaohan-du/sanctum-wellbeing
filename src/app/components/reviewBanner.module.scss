@@ -5,5 +5,16 @@
   z-index: 99;
   width: 20rem;
   border-radius: 0.5rem;
-  font-size: 1.2rem;
+}
+
+@media (max-width: 767px) { 
+  .readMore {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 639px) { 
+  .readMore {
+    width: 13rem;
+  }
 }

@@ -1,5 +1,11 @@
 export const reviewData = [
   {
+    name: '',
+    content: '',
+    rating: 5,
+    isDecorate: true
+  },
+  {
     name: 'Louise Stephens',
     content: 'Louise was fantastic. From start to finish she was professional, thorough and kind. Her energy was lovely and very calming. Her Indian head massage was the perfect amount of firmness for an effective treatment. I left in the most wonderful state of relaxation. Thank you so much ❤️',
     rating: 5,
@@ -12,12 +18,6 @@ export const reviewData = [
     rating: 5,
     isDecorate: false,
     linkUrl: 'https://goo.gl/maps/3RyS49J7hn5DaP578'
-  },
-  {
-    name: '',
-    content: '',
-    rating: 5,
-    isDecorate: true
   },
   {
     name: 'Alison Hawkins',

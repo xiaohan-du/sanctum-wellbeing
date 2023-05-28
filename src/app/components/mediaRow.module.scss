@@ -10,10 +10,21 @@
   flex-direction: row;
   align-items: center;
   font-size: 1.5rem;
-  padding: 0.5rem;
   & span {
     display: inline-block;
     transition: transform 200ms;
+  }
+}
+
+@media (max-width: 767px) { 
+  .container {
+    min-width: 16rem;
+  }
+}
+
+@media (max-width: 639px) { 
+  .container {
+    min-width: 8rem;
   }
 }
 

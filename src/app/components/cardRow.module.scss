@@ -9,18 +9,48 @@
   & p {
     margin: 0;
     opacity: 0.6;
-    font-size: 0.9rem;
     line-height: 1.5;
     max-width: 30ch;
   }
 
   & h2 {
     margin-bottom: 0.7rem;
-    font-size: 1.5rem;
   }
 
   & a{
-    width: 7rem;
+    width: 6.5rem;
+  }
+}
+
+@media (max-width: 1279px) { 
+  .card {
+    & a{
+      width: 6rem;
+    }
+  }
+
+  .cardRow {
+    min-width: 26rem;
+  }
+}
+
+@media (max-width: 1023px) { 
+  .card {
+    & a{
+      width: 4rem;
+    }
+  }
+}
+
+@media (max-width: 767px) { 
+  .card {
+    & a{
+      width: 3rem;
+    }
+
+    & h2 {
+      margin-bottom: 0.2rem;
+    }
   }
 }
 
@@ -28,6 +58,24 @@
   background-image: linear-gradient(to right, #e3d9f6, white 80%);
   box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.4);
   min-width: 33rem;
+}
+
+@media (max-width: 1279px) { 
+  .cardRow {
+    min-width: 25rem;
+  }
+}
+
+@media (max-width: 1023px) { 
+  .cardRow {
+    min-width: 20rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  .cardRow {
+    min-width: 17rem;
+  }
 }
 
 /* Enable hover only on non-touch devices */
@@ -45,25 +93,6 @@
 @media (prefers-reduced-motion) {
   .card:hover span {
     transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .card {
-    padding: 1rem 2.5rem;
-    & h2 {
-      margin-bottom: 0.5rem;
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  .cardRow {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
   }
 }
 
