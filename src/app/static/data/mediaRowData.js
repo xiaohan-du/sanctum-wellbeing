@@ -19,15 +19,5 @@ export const mediaRowData = [
     url: 'https://www.facebook.com/sanctumwellbeing',
     title: 'Facebook',
     imgUrl: facebook
-  },
-  {
-    url: 'tel:+447852135375',
-    title: 'Mobile',
-    imgUrl: call
-  },
-  {
-    url: 'mailto:info@sanctumwellbeing.co.uk',
-    title: 'Email',
-    imgUrl: email
   }
 ];
