@@ -22,14 +22,14 @@ import { Footer } from './components/footer';
 export default function Home() {
   return (
     <>
-      <main className={`${styles.main} max-w-screen-xl font-serif font-thin tracking-normal`}>
+      <main className={`${styles.main} px-8 max-w-screen-xl font-serif font-thin tracking-normal sm:px-4`}>
         <MainBanner />
         <ContactRow />
         <div className='mb-16'>
           <Banner
             title="About Me"
             content={["I am Louise Davies, MAR, CRM5 DIP, CNHC. I’m fully insured and DBS checked, Level 5 Clinical Reflexologist and Indian Head Massage therapist based in Cardiff. I set up my practice Sanctum Wellbeing to help others take the time to relax, de-stress and alleviate tension and anxieties. As a Reflexologist Practitioner and practising other complementary therapies being able to give my clients a calm, stress free hour to themselves so they can re-set and focus on their own wellbeing and health is the most rewarding feeling for me. If you have any queries, please do not hesitate to contact me on 07852 135375."]}
-            bannerHeight='h-80 md:h-112 sm:h-136'
+            bannerHeight='h-80 md:h-112 sm:h-192'
             negativeTitleMargin='-mt-20 xl:-mt-16 lg:-mt-12 md:-mt-8'
             imgUrl={foot}
           />
@@ -41,7 +41,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
-            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-160'
+            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-208'
             negativeTitleMargin='-mt-4 sm:-mt-10'
             imgUrl={hand}
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
@@ -50,7 +50,7 @@ export default function Home() {
               "Reflexology balms are created locally by The Apothecary, Canton, they are plant based and infused with wonderfully scented oils. "]}
           />
         </div>
-        <div className='-mt-24 lg:-mt-20 sm:-mt-28 mb-16 z-10'>
+        <div className='-mt-24 lg:-mt-20 sm:-mt-32 mb-16 z-10'>
           <MediaRow mediaRowData={mediaRowData} />
         </div>
 
@@ -71,7 +71,7 @@ export default function Home() {
             title="Treatments and Prices"
             negativeTitleMargin='-mt-16 sm:-mt-32'
             imgUrl={head}
-            bannerHeight='h-96 md:h-136 sm:h-168'
+            bannerHeight='h-96 md:h-136 sm:h-208'
             content={[
               "Indian Head Massage includes the back, shoulders, neck, arms, face and head. This treatment can be done clothed or you may wish to remove your upper garments to allow me to apply oil to the skin and apply firmer pressure to the muscles depending upon how tense you are, and what you need. Wraps are provided for you.",
               "The Ultimate is a combination of Indian Head Massage, Hand and Feet Reflexology. This is the ultimate super relaxing and stress busting treatment.",
@@ -86,7 +86,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Gift Vouchers"
-            bannerHeight='h-52 xl:h-56 md:h-96'
+            bannerHeight='h-52 xl:h-56 md:h-96 sm:h-128'
             negativeTitleMargin='-mt-4 xl:-mt-8'
             imgUrl={massage}
             content={[

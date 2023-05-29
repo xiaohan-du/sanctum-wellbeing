@@ -28,10 +28,6 @@
       width: 6rem;
     }
   }
-
-  .cardRow {
-    min-width: 26rem;
-  }
 }
 
 @media (max-width: 1023px) { 
@@ -45,7 +41,7 @@
 @media (max-width: 767px) { 
   .card {
     & a{
-      width: 3.5rem;
+      width: 4rem;
     }
 
     & h2 {
@@ -57,25 +53,6 @@
 .cardRow {
   background-image: linear-gradient(to right, #e3d9f6, white 80%);
   box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.4);
-  min-width: 33rem;
-}
-
-@media (max-width: 1279px) { 
-  .cardRow {
-    min-width: 25rem;
-  }
-}
-
-@media (max-width: 1023px) { 
-  .cardRow {
-    min-width: 20rem;
-  }
-}
-
-@media (max-width: 767px) { 
-  .cardRow {
-    min-width: 17rem;
-  }
 }
 
 /* Enable hover only on non-touch devices */

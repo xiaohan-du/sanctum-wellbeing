@@ -28,17 +28,17 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
         font-sans`}
     >
       <div className={`${negativeTitleMargin} flex flex-row md:flex-col-reverse items-center 2xl:max-w-6xl xl:max-w-5xl lg:max-w-3xl md:max-w-lg sm:max-w-sm`}>
-        <div className="max-w-6xl flex flex-col flex-wrap items-start gap-x-4 gap-y-2 px-12">
-          <h1 className='text-4xl xl:text-3xl lg:text-2xl md:text-xl'>
+        <div className="max-w-6xl flex flex-col flex-wrap items-start gap-x-4 gap-y-2 px-12 sm:px-8">
+          <h1 className='text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-3xl'>
             {title}
           </h1>
-          <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base italic'>
+          <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
             {subtitle}
           </h1>
           {
             content?.map((c, i) => {
               return (
-                <p key={i} className="text-lg xl:text-base lg:text-sm leading-6 text-gray-900">
+                <p key={i} className="text-lg xl:text-base lg:text-sm sm:text-lg leading-6 text-gray-900">
                   {c}
                 </p>
               )
