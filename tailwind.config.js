@@ -25,7 +25,8 @@ module.exports = {
         '168': '42rem',
         '184': '46rem',
         '192': '48rem',
-        '208': '56rem'
+        '208': '56rem',
+        '216': '58rem'
       },
       maxWidth: {
         'price-title': '6rem',

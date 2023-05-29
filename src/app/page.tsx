@@ -29,7 +29,7 @@ export default function Home() {
           <Banner
             title="About Me"
             content={["I am Louise Davies, MAR, CRM5 DIP, CNHC. I’m fully insured and DBS checked, Level 5 Clinical Reflexologist and Indian Head Massage therapist based in Cardiff. I set up my practice Sanctum Wellbeing to help others take the time to relax, de-stress and alleviate tension and anxieties. As a Reflexologist Practitioner and practising other complementary therapies being able to give my clients a calm, stress free hour to themselves so they can re-set and focus on their own wellbeing and health is the most rewarding feeling for me. If you have any queries, please do not hesitate to contact me on 07852 135375."]}
-            bannerHeight='h-80 md:h-112 sm:h-192'
+            bannerHeight='h-80 md:h-112 sm:h-208'
             negativeTitleMargin='-mt-20 xl:-mt-16 lg:-mt-12 md:-mt-8'
             imgUrl={foot}
           />
@@ -41,7 +41,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
-            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-208'
+            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-216'
             negativeTitleMargin='-mt-4 sm:-mt-10'
             imgUrl={hand}
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
