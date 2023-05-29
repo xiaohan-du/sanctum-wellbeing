@@ -22,7 +22,7 @@ export const PriceRow = ({ priceRowData }: IPriceRow) => {
       <div className='flex flex-row sm:grid sm:grid-cols-2'>
         {
           priceRowData.map(({ title, time, price }, i) => (
-            <div key={i} className='p-8 2xl:p-4 xl:p-2 md:p-1 flex flex-col items-center md:justify-between'>
+            <div key={i} className='p-8 2xl:p-4 xl:p-2 md:p-1 flex flex-col items-center justify-between'>
               <div className='m-1 text-lg 2xl:text-base xl:text-sm xl:max-w-price-title font-normal'>{title}</div>
               <div className='flex flex-col items-center'>
                 <div className='flex flex-row m-1'>

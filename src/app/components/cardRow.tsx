@@ -36,15 +36,13 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
   }, [cardRowData]);
 
   return (
-    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-16`}>
+    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-20`}>
       {
         cardRowData.map(({ tag, url, title, content, imgUrl }, index) => (
           <a
             key={index}
             href={url}
             className={`${styles.card} px-8 xl:px-4 h-full flex flex-col justify-center items-center`}
-            target="_blank"
-            rel="noopener noreferrer"
             data-id={tag}
           >
             {

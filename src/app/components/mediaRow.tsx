@@ -15,7 +15,7 @@ interface IMediaRow {
 export const MediaRow = ({ mediaRowData }: IMediaRow) => {
 
   return (
-    <div className={`${styles.container} font-sans flex flex-row sm:flex-col sm:items-start items-center`}>
+    <div className={`${styles.container} font-sans flex flex-row sm:flex-col sm:items-start items-center pl-4 pr-4`}>
       {
         mediaRowData.map(({ url, title, imgUrl }, i) => (
           <button key={i} className={`${styles.element} p-2 lg:p-1`}

@@ -38,7 +38,7 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
           {
             content?.map((c, i) => {
               return (
-                <p key={i} className="text-lg xl:text-base lg:text-sm sm:text-xs leading-6 text-gray-900">
+                <p key={i} className="text-lg xl:text-base lg:text-sm leading-6 text-gray-900">
                   {c}
                 </p>
               )
