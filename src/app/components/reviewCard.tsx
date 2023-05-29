@@ -15,7 +15,7 @@ export const ReviewCard = ({ name, content, rating, isDecorate, linkUrl }: IRevi
   return (
     <>
       {!isDecorate ? (
-        <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between shadow-lg p-4 lg:p-2 rounded-lg m-2 bg-white w-80 2xl:w-72 xl:w-56 md:w-52 h-80 2xl:h-72 xl:h-56 md:h-56 hover:shadow-2xl hover:transition-shadow duration-300">
+        <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between shadow-lg p-4 lg:p-2 sm:p-4 rounded-lg m-2 bg-white w-80 2xl:w-72 xl:w-56 md:w-52 sm:w-64 h-80 2xl:h-72 xl:h-56 md:h-56 sm:h-64 hover:shadow-2xl hover:transition-shadow duration-300">
           <div>
             <div className="flex justify-center mb-6 xl:mb-2">
               <StarRating rating={rating} />
@@ -44,9 +44,9 @@ export const ReviewCard = ({ name, content, rating, isDecorate, linkUrl }: IRevi
           </div>
         </a>
       ) : (
-        <div className='flex flex-col justify-center items-center shadow-lg rounded-lg m-2 bg-white w-80 2xl:w-72 xl:w-56 md:w-52 h-80 2xl:h-72 xl:h-56 md:h-56 hover:shadow-2xl hover:transition-shadow duration-300'>
+        <div className='flex flex-col justify-center items-center shadow-lg rounded-lg m-2 bg-white w-80 2xl:w-72 xl:w-56 sm:w-64 md:w-52 h-80 2xl:h-72 xl:h-56 md:h-56 sm:h-64 hover:shadow-2xl hover:transition-shadow duration-300'>
           <div className='flex flex-col justify-center items-center mt-28'>
-            <p className='-mb-44 md:-mb-48 text-2xl text-center'>Excellent <br /> Reviews</p>
+            <p className='-mb-48 text-2xl text-center'>Excellent <br /> Reviews</p>
             <Image src={wheat} alt="Logo" className='h-80 w-80' />
           </div>
         </div>

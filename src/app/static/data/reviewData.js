@@ -39,5 +39,26 @@ export const reviewData = [
     rating: 5,
     isDecorate: false,
     linkUrl: 'https://goo.gl/maps/P6h67JJQzFvhcMUS7'
-  }
+  },
+  {
+    name: 'Maz Miller',
+    content: 'Had an amazingly restorative treatment this morning! - reflexology and Indian head massage combined! Ended the session feeling bright eyed, rejuvenated & totally refreshed! 💜',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://goo.gl/maps/mwVQSEvYn4aatLeS8'
+  },
+  {
+    name: 'Tracy Harris',
+    content: 'Louise is brilliant! The best reflexologist and Indian head massage I’ve had! Feel so much better and balanced! Highly recommend',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://goo.gl/maps/1xMAqmGyvCze8Eaw6'
+  },
+  {
+    name: 'Elizabeth Stickler',
+    content: "Wasn't sure what to expect and what a pleasant surprise. Louise was friendly, knowledgeable and my feet left smiling. Highly recommended",
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://goo.gl/maps/qQmnuoyFDBStHJx59'
+  },
 ];
