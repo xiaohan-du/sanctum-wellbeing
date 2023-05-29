@@ -36,7 +36,7 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
   }, [cardRowData]);
 
   return (
-    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-24`}>
+    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-32`}>
       {
         cardRowData.map(({ tag, url, title, content, imgUrl }, index) => (
           <a
