@@ -47,7 +47,7 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
           >
             {
               title ? (
-                <h2 className='text-xl lg:text-base md:text-sm'>
+                <h2 className='text-xl lg:text-base'>
                   {title}
                 </h2>
               ) : null
@@ -55,7 +55,7 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
             <p className='font-normal lg:text-sm md:text-xs'>{content}</p>
             {
               imgUrl ? (
-                <Image src={imgUrl} alt="Logo" className='h-28 xl:h-24 lg:h-16 md:h-16 md:w-16 w-auto' />
+                <Image src={imgUrl} alt="Logo" className='h-28 xl:h-24 lg:h-16 md:h-20 md:w-20 w-auto' />
               ) : null
             }
           </a>
