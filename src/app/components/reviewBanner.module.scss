@@ -1,0 +1,20 @@
+.readMore {
+  height: 3rem;
+  color: white;
+  background-image: linear-gradient(to right, #9089fc, #ff80b5);
+  z-index: 99;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 767px) { 
+  .readMore {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 639px) { 
+  .readMore {
+    width: 13rem;
+  }
+}
