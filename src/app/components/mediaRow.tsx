@@ -15,10 +15,10 @@ interface IMediaRow {
 export const MediaRow = ({ mediaRowData }: IMediaRow) => {
 
   return (
-    <div className={`${styles.container} font-sans flex flex-row sm:flex-col sm:items-start items-center pl-4 pr-4`}>
+    <div className={`${styles.container} font-sans flex flex-row sm:flex-col sm:items-start items-center`}>
       {
         mediaRowData.map(({ url, title, imgUrl }, i) => (
-          <button key={i} className={`${styles.element} p-2 lg:p-1`}
+          <button key={i} className={`${styles.element} p-2 lg:p-1 w-full`}
             onClick={() => redirectTo(url, false)}
           >
             <Image src={imgUrl} alt="icons" className='h-12 lg:h-10 md:h-6 sm:h-10 w-auto mr-1' />
