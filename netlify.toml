@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://www.sanctumwellbeing.co.uk"
+  to = "https://sanctumwellbeing.co.uk"
+  status = 301
+  force = true
