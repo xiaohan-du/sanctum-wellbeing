@@ -18,6 +18,7 @@ import foot from './static/images/foot.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
 import { Footer } from './components/footer';
+import { OpeningHours } from './components/openingHours';
 
 export default function Home() {
   return (
@@ -110,6 +111,7 @@ export default function Home() {
         <div className='mb-4'>
           <ReviewBanner reviewData={reviewData} />
         </div>
+        <OpeningHours />
         <Footer />
       </main>
     </>
