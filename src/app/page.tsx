@@ -18,6 +18,8 @@ import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
+import { vtctRowData } from './static/data/vtctRowData';
+import { ImageRow } from './components/imageRow';
 
 export default function Home() {
   return (
@@ -36,6 +38,19 @@ export default function Home() {
         </div>
         <div className='-mt-36 xl:-mt-32 lg:-mt-28 md:-mt-24 mb-16 z-10'>
           <CardRow cardRowData={cardRowData} />
+        </div>
+
+        <div className='mb-16'>
+          <Banner
+            title="VTCT Level 3 Qualified for Indian Massage"
+            content={["Indian Head Massage has been used in Asia for over 5000 years. The massage helps to ease tension and promote relaxation and wellbeing. The areas worked are the head, scalp, face, neck, arms, shoulders and back."]}
+            bannerHeight='h-52 xl:h-56 md:h-96 sm:h-152'
+            negativeTitleMargin='-mt-4 xl:-mt-8'
+            imgUrl={massage}
+          />
+        </div>
+        <div className='-mt-36 xl:-mt-32 lg:-mt-28 md:-mt-28 mb-16 z-20'>
+          <ImageRow imageRowData={vtctRowData} />
         </div>
 
         <div className='mb-16'>
