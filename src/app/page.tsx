@@ -49,7 +49,7 @@ export default function Home() {
             imgUrl={massage}
           />
         </div>
-        <div className='-mt-36 xl:-mt-32 lg:-mt-28 md:-mt-28 mb-16 z-20'>
+        <div className='-mt-28 mb-16 z-20'>
           <ImageRow imageRowData={vtctRowData} />
         </div>
 

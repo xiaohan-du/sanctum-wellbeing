@@ -1,4 +1,4 @@
-import vtct from '../images/vtct.jpg';
+import vtct from '../images/vtct.jpeg';
 import styles from '../../components/imageRow.module.scss';
 
 export const vtctRowData = [
