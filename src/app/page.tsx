@@ -8,7 +8,6 @@ import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { PriceRow } from './components/priceRow';
-import { voucherRowData } from './static/data/voucherRowData';
 import { priceRowData } from './static/data/priceRowData';
 import { ContactRow } from './components/contactRow';
 import head from './static/images/head.png';
