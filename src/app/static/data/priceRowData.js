@@ -11,8 +11,8 @@ export const priceRowData = [
   },
   {
     title: 'Indian Head Massage',
-    time: '45 min',
-    price: '£40'
+    time: '60 min',
+    price: '£45'
   },
   {
     title: "‘The Ultimate’",
