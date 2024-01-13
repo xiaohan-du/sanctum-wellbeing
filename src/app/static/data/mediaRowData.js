@@ -1,8 +1,6 @@
 import instagram from '../images/instagram.svg';
 import linkedin from '../images/linkedin.svg';
 import facebook from '../images/facebook.svg';
-import call from '../images/call.svg';
-import email from '../images/email.svg';
 
 export const mediaRowData = [
   {
