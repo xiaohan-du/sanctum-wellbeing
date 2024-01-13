@@ -16,6 +16,7 @@ import back from './static/images/back.png';
 import foot from './static/images/foot.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
+import forehead from './static/images/forehead.png';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
 import { vtctRowData } from './static/data/vtctRowData';
@@ -42,11 +43,11 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
-            title="VTCT Level 3 Qualified for Indian Massage"
-            content={["Indian Head Massage has been used in Asia for over 5000 years. The massage helps to ease tension and promote relaxation and wellbeing. The areas worked are the head, scalp, face, neck, arms, shoulders and back."]}
-            bannerHeight='h-52 xl:h-56 md:h-96 sm:h-152'
+            title="Indian Head Massage"
+            content={["Indian head massage is an ancient therapeutic practice that has been used in India for over 2000 years, (since around 600 B.C.). It is also known as champissage, and is a treatment that focuses on massaging acupressure points (Marma Points) along the head, neck, and shoulders, often using various massage techniques to improve hair and scalp condition.", "It is understood that Indian head massage can not only reduce headaches and improve physical well-being, but it can also improve mental and emotional wellness too. It can help ease tension and stress, promote relaxation and wellbeing.", "At Sanctum Wellbeing an Indian Head Massage incorporates the full back, neck, shoulders, arms, face and head.", "It is usually done whilst seated and through light clothing, however we use a massage chair or massage bed which lets you fully relax, you have the option to remove upper garments and have oils applied to the body, and head. Wraps are provided to cover up."]}
+            bannerHeight='h-96 2xl:h-128 xl:h-128 md:h-160 sm:h-232'
             negativeTitleMargin='-mt-4 xl:-mt-8'
-            imgUrl={massage}
+            imgUrl={forehead}
           />
         </div>
         <div className='-mt-28 mb-16 z-20'>
@@ -114,7 +115,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Health Cash Plans"
-            subtitle=' - Do you have a Health Shield , Simply Health, BHSF or similar health cash plan?'
+            subtitle=' - Do you have a Health Shield , Simply Health, Medicash or similar health cash plan?'
             imgUrl={lady}
             content={[
               "Depending or your policy and level of cover, you could be reimbursed the cost of treatments. Do check your policy or contact your provider first. Please contact me if you need further information.",
