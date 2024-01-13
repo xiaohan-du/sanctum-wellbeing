@@ -1,12 +1,13 @@
 import cnhc from '../images/cnhc.jpeg';
+import aorLogo from '../images/aorLogo.jpeg';
 
 export const cardRowData = [
   {
-    tag: 'reflexology',
-    url: 'https://www.aor.org.uk/what-is-reflexology/',
-    title: 'Reflexology',
-    content: 'Find More',
-    imgUrl: ''
+    tag: 'cnhc',
+    url: 'https://www.cnhc.org.uk/#gsc.tab=0',
+    title: '',
+    content: '',
+    imgUrl: cnhc
   },
   {
     tag: 'aor',
@@ -16,10 +17,10 @@ export const cardRowData = [
     imgUrl: ''
   },
   {
-    tag: 'cnhc',
-    url: 'https://www.cnhc.org.uk/#gsc.tab=0',
+    tag: 'reflexology',
+    url: 'https://www.aor.org.uk/about-us/what-is-reflexology/',
     title: '',
     content: '',
-    imgUrl: cnhc
+    imgUrl: aorLogo
   }
 ];
