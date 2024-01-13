@@ -43,6 +43,18 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
+            title="Events - Corporate and Social"
+            imgUrl={back}
+            content={[
+              "Are you organising an event or would like to arrange a bespoke wellbeing day for friends/family or team building event for your workforce? Can you see the signs of stress in the workplace and would like to help? Would you like to help optimise employee’s wellbeing?",
+              '"Sanctum Wellbeing in the Workplace Days" are onsite visits offering complementary therapies that can be arranged to suit your business requirements. ',
+              "If you would like further information on Sanctum Wellbeing in the Workplace Days please do not hesitate to get in touch and we can discuss the day in further detail and your requirements. Contact Louise on 07852 135375 or info@sanctumwellbeing.co.uk."
+            ]}
+          />
+        </div>
+
+        <div className='mb-16'>
+          <Banner
             title="Indian Head Massage"
             content={["Indian head massage is an ancient therapeutic practice that has been used in India for over 2000 years, (since around 600 B.C.). It is also known as champissage, and is a treatment that focuses on massaging acupressure points (Marma Points) along the head, neck, and shoulders, often using various massage techniques to improve hair and scalp condition.", "It is understood that Indian head massage can not only reduce headaches and improve physical well-being, but it can also improve mental and emotional wellness too. It can help ease tension and stress, promote relaxation and wellbeing.", "At Sanctum Wellbeing an Indian Head Massage incorporates the full back, neck, shoulders, arms, face and head.", "It is usually done whilst seated and through light clothing, however we use a massage chair or massage bed which lets you fully relax, you have the option to remove upper garments and have oils applied to the body, and head. Wraps are provided to cover up."]}
             bannerHeight='h-96 2xl:h-128 xl:h-128 md:h-160 sm:h-232'
@@ -68,18 +80,6 @@ export default function Home() {
         </div>
         <div className='-mt-24 lg:-mt-20 sm:-mt-32 mb-16 z-10'>
           <MediaRow mediaRowData={mediaRowData} />
-        </div>
-
-        <div className='mb-16'>
-          <Banner
-            title="Events - Corporate and Social"
-            imgUrl={back}
-            content={[
-              "Are you organising an event or would like to arrange a bespoke wellbeing day for friends/family or team building event for your workforce? Can you see the signs of stress in the workplace and would like to help? Would you like to help optimise employee’s wellbeing?",
-              '"Sanctum Wellbeing in the Workplace Days" are onsite visits offering complementary therapies that can be arranged to suit your business requirements. ',
-              "If you would like further information on Sanctum Wellbeing in the Workplace Days please do not hesitate to get in touch and we can discuss the day in further detail and your requirements. Contact Louise on 07852 135375 or info@sanctumwellbeing.co.uk."
-            ]}
-          />
         </div>
 
         <div className='mb-16'>
