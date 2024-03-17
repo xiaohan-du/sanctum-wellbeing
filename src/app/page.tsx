@@ -21,6 +21,8 @@ import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
 import { vtctRowData } from './static/data/vtctRowData';
 import { ImageRow } from './components/imageRow';
+import { Ad } from './components/ad';
+import { adData } from './static/data/adData';
 
 export default function Home() {
   return (
@@ -28,6 +30,7 @@ export default function Home() {
       <main className={`${styles.main} px-8 max-w-screen-xl font-serif font-thin tracking-normal sm:px-4`}>
         <MainBanner />
         <ContactRow />
+        <Ad adData={adData}/>
         <div className='mb-16'>
           <Banner
             title="About Me"
