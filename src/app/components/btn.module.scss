@@ -8,14 +8,15 @@
 }
 
 .book {
-  height: 3.5rem;
-  width: 21rem;
+  height: 4.5rem;
+  width: 24rem;
 }
 
 @media (max-width: 767px) { 
   .basic {
     width: 15rem;
   }
+  
   .book {
     height: 3rem;
     width: 15rem;
@@ -25,5 +26,10 @@
 @media (max-width: 639px) { 
   .basic {
     width: 13rem;
+  }
+
+  .book {
+    height: 3rem;
+    width: 15rem;
   }
 }
