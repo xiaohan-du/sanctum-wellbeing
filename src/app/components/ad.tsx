@@ -55,8 +55,8 @@ export const Ad = ({ adData }: IAd) => {
       </div>
       {
         adData.content ? (
-          <a href={adData.url} className='mt-6' rel="noopener noreferrer">
-            <button className={`${btnStyles.readMore} font-sans font-medium text-lg md:text-base sm:text-sm`}>
+          <a href={adData.url} rel="noopener noreferrer">
+            <button className={`${btnStyles.basic} ${btnStyles.book} font-sans font-medium text-3xl md:text-lg sm:text-md`}>
               {adData.content}
             </button>
           </a>
