@@ -1,4 +1,4 @@
-.readMore {
+.basic {
   height: 3rem;
   color: white;
   background-image: linear-gradient(to right, #9089fc, #ff80b5);
@@ -7,14 +7,23 @@
   border-radius: 0.5rem;
 }
 
+.book {
+  height: 3.5rem;
+  width: 21rem;
+}
+
 @media (max-width: 767px) { 
-  .readMore {
+  .basic {
+    width: 15rem;
+  }
+  .book {
+    height: 3rem;
     width: 15rem;
   }
 }
 
 @media (max-width: 639px) { 
-  .readMore {
+  .basic {
     width: 13rem;
   }
 }
