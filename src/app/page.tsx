@@ -7,8 +7,6 @@ import { cardRowData } from './static/data/cardRowData';
 import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
-import { PriceRow } from './components/priceRow';
-import { priceRowData } from './static/data/priceRowData';
 import { ContactRow } from './components/contactRow';
 import head from './static/images/head.png';
 import hand from './static/images/hand.png';
@@ -23,6 +21,8 @@ import { vtctRowData } from './static/data/vtctRowData';
 import { ImageRow } from './components/imageRow';
 import { Ad } from './components/ad';
 import { adData } from './static/data/adData';
+import { DetailedPriceRowBox } from './components/detailedPriceRowBox';
+import { detailedPriceRowBoxData } from './static/data/detailedPriceRowBoxData';
 
 export default function Home() {
   return (
@@ -72,13 +72,13 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
-            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-216'
+            bannerHeight='h-96 2xl:h-96 lg:h-96 md:h-152 sm:h-224'
             negativeTitleMargin='-mt-4 sm:-mt-10'
             imgUrl={hand}
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
               "Mobile visits are available. Onsite workplace visits can be arranged to suit your business requirements.",
               "The treatment room has been created for the senses, for you to be indulged with wonderfully scented oils, warm fluffy blankets which are heated on cold days, soft music playing, and comfortable relaxing chairs and beds. Herbal teas and water are provided, and complimentary face masks for during your treatment. Hot water bottles are also to hand should you require one. ",
-              "Reflexology balms are created locally by The Apothecary, Canton, they are plant based and infused with wonderfully scented oils. "]}
+              "Services I provide are Reflexology, Thai Foot Massage, Aromatherapy Facial Massage, Indian Head massage. I am always updating my skills, and will be offering new therapies soon, watch this space. "]}
           />
         </div>
         <div className='-mt-24 lg:-mt-20 sm:-mt-32 mb-16 z-10'>
@@ -99,7 +99,7 @@ export default function Home() {
           />
         </div>
         <div className='-mt-36 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>
-          <PriceRow priceRowData={priceRowData} />
+          <DetailedPriceRowBox detailedPriceRowBoxData={detailedPriceRowBoxData} />
         </div>
 
         <div className='mb-16'>
