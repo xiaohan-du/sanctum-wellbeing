@@ -21,7 +21,6 @@ export const DetailedPriceRow = ({ title, time, price, description }: IDetailedP
       <div className='w-1/6 md:w-3/4 m-1 text-lg 2xl:text-xl xl:text-sm font-normal'>{title}</div>
       <div className='flex flex-col md:flex-row items-center'>
         <div className='w-full flex flex-row m-1 justify-center'>
-          <Image src={clock} alt="Logo" className='h-6 xl:h-5 w-auto m-1 mr-1' />
           <div className='text-lg m-1 xl:text-sm'>{time}</div>
         </div>
         <div className='text-lg 2xl:text-2xl xl:text-base m-1 font-normal'>{price}</div>

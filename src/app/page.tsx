@@ -58,19 +58,6 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
-            title="Indian Head Massage"
-            content={["Indian head massage is an ancient therapeutic practice that has been used in India for over 2000 years, (since around 600 B.C.). It is also known as champissage, and is a treatment that focuses on massaging acupressure points (Marma Points) along the head, neck, and shoulders, often using various massage techniques to improve hair and scalp condition.", "It is understood that Indian head massage can not only reduce headaches and improve physical well-being, but it can also improve mental and emotional wellness too. It can help ease tension and stress, promote relaxation and wellbeing.", "At Sanctum Wellbeing an Indian Head Massage incorporates the full back, neck, shoulders, arms, face and head.", "It is usually done whilst seated and through light clothing, however we use a massage chair or massage bed which lets you fully relax, you have the option to remove upper garments and have oils applied to the body, and head. Wraps are provided to cover up."]}
-            bannerHeight='h-96 2xl:h-128 xl:h-128 md:h-160 sm:h-232'
-            negativeTitleMargin='-mt-4 xl:-mt-8'
-            imgUrl={forehead}
-          />
-        </div>
-        <div className='-mt-28 mb-16 z-20'>
-          <ImageRow imageRowData={vtctRowData} />
-        </div>
-
-        <div className='mb-16'>
-          <Banner
             title="The Business"
             bannerHeight='h-96 2xl:h-96 lg:h-96 md:h-152 sm:h-224'
             negativeTitleMargin='-mt-4 sm:-mt-10'
@@ -89,13 +76,8 @@ export default function Home() {
           <Banner
             title="Treatments and Prices"
             negativeTitleMargin='-mt-16 sm:-mt-32'
-            imgUrl={head}
-            bannerHeight='h-96 md:h-136 sm:h-216'
-            content={[
-              "Indian Head Massage includes the back, shoulders, neck, arms, face and head. This treatment can be done clothed or you may wish to remove your upper garments to allow me to apply oil to the skin and apply firmer pressure to the muscles depending upon how tense you are, and what you need. Wraps are provided for you.",
-              "The Ultimate is a combination of Indian Head Massage, Hand and Feet Reflexology. This is the ultimate super relaxing and stress busting treatment.",
-              "Mobile treatments in Cardiff are available where I come and set up in the comfort of your own home. Outside Cardiff a fee to cover travel cost will be incurred. "
-            ]}
+            bannerHeight='h-56 xl:h-48 lg:h-36 sm:h-64'
+            content={[]}
           />
         </div>
         <div className='-mt-36 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>

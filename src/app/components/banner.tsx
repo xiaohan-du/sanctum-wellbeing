@@ -45,9 +45,11 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
             })
           }
         </div>
-        <div className='pr-12 md:pr-0 md:mb-2'>
-          <Image src={imgUrl} alt="photo" className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
-        </div>
+        {imgUrl ? (
+          <div className='pr-12 md:pr-0 md:mb-2'>
+            <Image src={imgUrl} alt="photo" className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
+          </div>
+        ) : null}
 
         <div className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
           <div className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
