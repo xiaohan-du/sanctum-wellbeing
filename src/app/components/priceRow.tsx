@@ -3,9 +3,6 @@
 import styles from './priceRow.module.scss';
 import clock from '../static/images/clock.svg';
 import Image from 'next/image';
-import call from '../static/images/call.svg';
-import email from '../static/images/email.svg';
-import { redirectTo } from '../functions/redirectTo';
 
 interface IPriceRow {
   priceRowData: Array<{

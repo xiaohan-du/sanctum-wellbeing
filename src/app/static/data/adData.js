@@ -1,5 +1,5 @@
 export const adData =
 {
   content: "Click here to book online",
-  url: 'https://www.fresha.com/a/sanctum-wellbeing-cardiff-uk-88-fields-park-road-z5cvax7v'
+  url: 'https://www.fresha.com/book-now/sanctum-wellbeing-gq5cksyy/services?lid=1114766&eid=2652609&pId=1057120'
 };
