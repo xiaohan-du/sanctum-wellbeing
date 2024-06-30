@@ -8,21 +8,17 @@ import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { ContactRow } from './components/contactRow';
-import head from './static/images/head.png';
 import hand from './static/images/hand.png';
 import back from './static/images/back.png';
 import foot from './static/images/foot.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
-import forehead from './static/images/forehead.png';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
-import { vtctRowData } from './static/data/vtctRowData';
-import { ImageRow } from './components/imageRow';
 import { Ad } from './components/ad';
 import { adData } from './static/data/adData';
-import { DetailedPriceRowBox } from './components/detailedPriceRowBox';
-import { detailedPriceRowBoxData } from './static/data/detailedPriceRowBoxData';
+import { PriceCardBox } from './components/priceCardBox';
+import { priceCardData } from './static/data/priceCardData'
 
 export default function Home() {
   return (
@@ -75,13 +71,13 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
-            negativeTitleMargin='-mt-16 sm:-mt-32'
-            bannerHeight='h-56 xl:h-48 lg:h-36 sm:h-64'
+            negativeTitleMargin='-mt-216 sm:-mt-32'
+            bannerHeight='h-232 xl:h-48 lg:h-36 sm:h-64'
             content={[]}
           />
         </div>
-        <div className='-mt-36 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>
-          <DetailedPriceRowBox detailedPriceRowBoxData={detailedPriceRowBoxData} />
+        <div className='-mt-224 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>
+          <PriceCardBox priceCardData={priceCardData}/>
         </div>
 
         <div className='mb-16'>

@@ -1,7 +1,5 @@
 'use client'
 
-import clock from '../static/images/clock.svg';
-import Image from 'next/image';
 import ShowMoreText from "react-show-more-text";
 import styles from './detailedPriceRow.module.scss';
 
