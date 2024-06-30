@@ -7,22 +7,18 @@ import { cardRowData } from './static/data/cardRowData';
 import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
-import { PriceRow } from './components/priceRow';
-import { priceRowData } from './static/data/priceRowData';
 import { ContactRow } from './components/contactRow';
-import head from './static/images/head.png';
 import hand from './static/images/hand.png';
 import back from './static/images/back.png';
 import foot from './static/images/foot.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
-import forehead from './static/images/forehead.png';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
-import { vtctRowData } from './static/data/vtctRowData';
-import { ImageRow } from './components/imageRow';
 import { Ad } from './components/ad';
 import { adData } from './static/data/adData';
+import { PriceCardBox } from './components/priceCardBox';
+import { priceCardData } from './static/data/priceCardData'
 
 export default function Home() {
   return (
@@ -58,27 +54,14 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
-            title="Indian Head Massage"
-            content={["Indian head massage is an ancient therapeutic practice that has been used in India for over 2000 years, (since around 600 B.C.). It is also known as champissage, and is a treatment that focuses on massaging acupressure points (Marma Points) along the head, neck, and shoulders, often using various massage techniques to improve hair and scalp condition.", "It is understood that Indian head massage can not only reduce headaches and improve physical well-being, but it can also improve mental and emotional wellness too. It can help ease tension and stress, promote relaxation and wellbeing.", "At Sanctum Wellbeing an Indian Head Massage incorporates the full back, neck, shoulders, arms, face and head.", "It is usually done whilst seated and through light clothing, however we use a massage chair or massage bed which lets you fully relax, you have the option to remove upper garments and have oils applied to the body, and head. Wraps are provided to cover up."]}
-            bannerHeight='h-96 2xl:h-128 xl:h-128 md:h-160 sm:h-232'
-            negativeTitleMargin='-mt-4 xl:-mt-8'
-            imgUrl={forehead}
-          />
-        </div>
-        <div className='-mt-28 mb-16 z-20'>
-          <ImageRow imageRowData={vtctRowData} />
-        </div>
-
-        <div className='mb-16'>
-          <Banner
             title="The Business"
-            bannerHeight='h-80 2xl:h-96 lg:h-80 md:h-128 sm:h-216'
+            bannerHeight='h-96 2xl:h-96 lg:h-96 md:h-152 sm:h-216'
             negativeTitleMargin='-mt-4 sm:-mt-10'
             imgUrl={hand}
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
               "Mobile visits are available. Onsite workplace visits can be arranged to suit your business requirements.",
               "The treatment room has been created for the senses, for you to be indulged with wonderfully scented oils, warm fluffy blankets which are heated on cold days, soft music playing, and comfortable relaxing chairs and beds. Herbal teas and water are provided, and complimentary face masks for during your treatment. Hot water bottles are also to hand should you require one. ",
-              "Reflexology balms are created locally by The Apothecary, Canton, they are plant based and infused with wonderfully scented oils. "]}
+              "Services I provide are Reflexology, Thai Foot Massage, Aromatherapy Facial Massage, Indian Head massage. I am always updating my skills, and will be offering new therapies soon, watch this space. "]}
           />
         </div>
         <div className='-mt-24 lg:-mt-20 sm:-mt-32 mb-16 z-10'>
@@ -88,18 +71,13 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
-            negativeTitleMargin='-mt-16 sm:-mt-32'
-            imgUrl={head}
-            bannerHeight='h-96 md:h-136 sm:h-216'
-            content={[
-              "Indian Head Massage includes the back, shoulders, neck, arms, face and head. This treatment can be done clothed or you may wish to remove your upper garments to allow me to apply oil to the skin and apply firmer pressure to the muscles depending upon how tense you are, and what you need. Wraps are provided for you.",
-              "The Ultimate is a combination of Indian Head Massage, Hand and Feet Reflexology. This is the ultimate super relaxing and stress busting treatment.",
-              "Mobile treatments in Cardiff are available where I come and set up in the comfort of your own home. Outside Cardiff a fee to cover travel cost will be incurred. "
-            ]}
+            negativeTitleMargin='-mt-216 md:-mt-264 sm:-mt-280'
+            bannerHeight='h-232 md:h-280 sm:h-296'
+            content={[]}
           />
         </div>
-        <div className='-mt-36 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>
-          <PriceRow priceRowData={priceRowData} />
+        <div className='-mt-224 md:-mt-272 sm:-mt-288 mb-16 z-10'>
+          <PriceCardBox priceCardData={priceCardData}/>
         </div>
 
         <div className='mb-16'>

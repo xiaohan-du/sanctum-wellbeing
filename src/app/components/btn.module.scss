@@ -2,14 +2,36 @@
   height: 3rem;
   color: white;
   background-image: linear-gradient(to right, #9089fc, #ff80b5);
-  z-index: 99;
   width: 20rem;
   border-radius: 0.5rem;
+}
+
+.view {
+  width: 15rem;
 }
 
 .book {
   height: 4.5rem;
   width: 24rem;
+}
+
+@media (max-width: 1380px) { 
+  .view {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 1280px) { 
+  .view {
+    width: 11rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) { 
+  .view {
+    width: 8rem;
+  }
 }
 
 @media (max-width: 767px) { 
@@ -21,6 +43,10 @@
     height: 3rem;
     width: 15rem;
   }
+
+  .view {
+    width: 12rem;
+  }
 }
 
 @media (max-width: 639px) { 
@@ -31,5 +57,9 @@
   .book {
     height: 3rem;
     width: 15rem;
+  }
+
+  .view {
+    width: 12rem;
   }
 }
