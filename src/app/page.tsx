@@ -55,7 +55,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="The Business"
-            bannerHeight='h-96 2xl:h-96 lg:h-96 md:h-152 sm:h-224'
+            bannerHeight='h-96 2xl:h-96 lg:h-96 md:h-152 sm:h-216'
             negativeTitleMargin='-mt-4 sm:-mt-10'
             imgUrl={hand}
             content={["I run my practice from my lovely treatment room in Pontcanna, Cardiff.",
@@ -71,12 +71,12 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
-            negativeTitleMargin='-mt-216 sm:-mt-32'
-            bannerHeight='h-232 xl:h-48 lg:h-36 sm:h-64'
+            negativeTitleMargin='-mt-216 md:-mt-264 sm:-mt-280'
+            bannerHeight='h-232 md:h-280 sm:h-296'
             content={[]}
           />
         </div>
-        <div className='-mt-224 2xl:-mt-32 sm:-mt-44 mb-16 z-10'>
+        <div className='-mt-224 md:-mt-272 sm:-mt-288 mb-16 z-10'>
           <PriceCardBox priceCardData={priceCardData}/>
         </div>
 

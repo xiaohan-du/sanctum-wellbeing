@@ -15,6 +15,25 @@
   width: 24rem;
 }
 
+@media (max-width: 1380px) { 
+  .view {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 1280px) { 
+  .view {
+    width: 11rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) { 
+  .view {
+    width: 8rem;
+  }
+}
+
 @media (max-width: 767px) { 
   .basic {
     width: 15rem;
@@ -23,6 +42,10 @@
   .book {
     height: 3rem;
     width: 15rem;
+  }
+
+  .view {
+    width: 12rem;
   }
 }
 
@@ -34,5 +57,9 @@
   .book {
     height: 3rem;
     width: 15rem;
+  }
+
+  .view {
+    width: 12rem;
   }
 }

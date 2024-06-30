@@ -10,8 +10,7 @@ interface PriceModalProps {
 
 export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time, price, description }) => {
   return (
-    <div tabIndex={-1} aria-hidden="true" className="
-      overflow-hidden 
+    <div aria-hidden="true" className="
       backdrop-blur 
       fixed 
       top-0 
@@ -25,14 +24,13 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
       h-full
       max-h-full
       flex
-      overscroll-none
       font-sans font-normal tracking-wide"
     >
-      <div className="p-4 w-full max-w-4xl max-h-full">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700 p-12">
-          <div className="flex items-start justify-start md:p-5 border-b rounded-t dark:border-gray-600">
+      <div className="p-4 w-full max-w-4xl xl:max-w-3xl xl:max-w-2xl sm:max-w-sm max-h-full">
+        <div className="relative bg-white rounded-lg shadow p-12 xl:p-8 sm:p-2">
+          <div className="flex items-start justify-start border-b rounded-t">
             <div className="w-full">
-              <h3 className="text-4xl flex w-full justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-4xl xl:text-3xl sm:text-xl flex w-full justify-between p-4 font-semibold text-gray-900">
                 <span className="w-4/5">{title}</span>
                 <button type="button" className="
                   text-gray-400 
@@ -45,9 +43,7 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
                   ms-auto 
                   inline-flex 
                   justify-center 
-                  items-center 
-                  dark:hover:bg-gray-600 
-                  dark:hover:text-white"
+                  items-center"
                   onClick={toggleModal}
                 >
                   <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -56,16 +52,24 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
                   <span className="sr-only">Close modal</span>
                 </button>
               </h3>
-              <div className="flex p-4 flex-col justify-start border-t w-full items-start rounded-b text-gray-600">
+              <div className="flex p-4 flex-col sm:flex-row justify-start border-t w-full items-start rounded-b text-gray-600">
                 <p>{time}</p>
-                <p className="text-2xl">{price}</p>
+                <p className="text-2xl xl:text-xl sm:ml-2 sm:text-base">{price}</p>
               </div>
             </div>
 
           </div>
           <div className="p-4 md:p-5 space-y-4">
-            <p className="text-xl leading-relaxed text-gray-800 dark:text-gray-400">
-              {description}
+            <p className="text-xl xl:text-base sm:text-sm leading-relaxed sm:leading-tight text-gray-800">
+              {
+                description?.map((c, i) => {
+                  return (
+                    <p key={i}>
+                      {c}
+                    </p>
+                  )
+                })
+              }
             </p>
           </div>
 

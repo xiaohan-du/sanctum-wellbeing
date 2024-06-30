@@ -4,3 +4,19 @@
     min-height: 14rem;
   }
 }
+
+@media (max-width: 767px) { 
+  .priceCard {
+    &Details {
+      min-height: 11rem;
+    }
+  }
+}
+
+@media (max-width: 639px) { 
+  .priceCard {
+    &Details {
+      min-height: 13rem;
+    }
+  }
+}
