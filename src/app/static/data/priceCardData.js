@@ -1,11 +1,11 @@
 import handFeet from '../images/handfeet.jpg';
-import back from '../images/back.png';
 import foot from '../images/foot.png';
-import pebble from '../images/pebble.png';
-import lady from '../images/lady.png';
 import head from '../images/head.png';
 import forehead from '../images/forehead.png';
 import oil from '../images/oil.webp';
+import ladyCream from '../images/ladyCream.png';
+import whiteSheet from '../images/whiteSheet.png';
+import greyCream from '../images/greyCream.png';
 
 export const priceCardData = [
   {
@@ -35,7 +35,7 @@ export const priceCardData = [
     title: "‘The Ultimate’",
     time: '90 min',
     price: '£75',
-    imgUrl: back,
+    imgUrl: whiteSheet,
     description: ["A super stress busting treatment consisting of Indian Head Massage techniques using marma pressure points. Massaging full back, neck, shoulders, arm, face, head, hands and feet. Reflexology & Thai Foot techniques with acupressure points. Complimentary face mask is offered."]
   },
   {
@@ -52,7 +52,7 @@ export const priceCardData = [
     title: 'Sheer Bliss Aromatherapy Facial with full back and Indian Head Massage',
     time: '90 min',
     price: '£85',
-    imgUrl: pebble,
+    imgUrl: ladyCream,
     description: ["Bliss Facial Aromatherapy Prescription facial treatment, uses bespoke aromatherapy oils tailored to your skin type.", 
     "Decadent skin cleanser's, toners, moisturisers, facial scrubs and face masks are applied to leave your skin feeling exfoliated, clean, hydrated and balanced.  Our facial steamer helps open and cleanse pores, and sends you into a deep state of relaxation ready for aromatherapy oils to be massaged into the skin.",
     "Indian Head Massage techniques are used on the head and scalp during the treatment.",
@@ -62,7 +62,7 @@ export const priceCardData = [
     title: 'Sheer Bliss 2 hour package with facial',
     time: '120 min',
     price: '£110',
-    imgUrl: lady,
+    imgUrl: greyCream,
     description: ["This heavenly treatment includes the Bliss Aromatherapy Facial massage with aromatherapy oils tailored to your skin type.", 
     "Decadent skin cleanser's, toners, moisturisers, facial scrubs and face masks are applied to leave your skin feeling exfoliated, clean, hydrated and balanced.  Our facial steamer helps open and cleanse pores, and sends you into a deep state of relaxation ready for aromatherapy oils to be massaged into the skin.", 
     "Indian Head Massage techniques are used on the head and scalp during the treatment. Pressure is applied to Marma points on the head and face. A full back massage, face, head, neck, chest and hand massage is included during the treatment.", 
