@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react';
-import test from '../static/images/image-1.jpeg';
 import Image from 'next/image';
 import { PriceModal } from './priceModal';
 import btnStyles from './btn.module.scss';
@@ -37,7 +36,7 @@ export const PriceCard = ({ title, time, price, imgUrl, description }: IPriceCar
         hover:shadow-2xl
         hover:transition-shadow duration-300"
       >
-        <Image className="rounded-t-lg h-56 xl:h-48 lg:h-36 object-cover w-full" src={imgUrl} alt="" />
+        <Image className="rounded-t-lg h-56 xl:h-48 object-cover w-full" src={imgUrl} alt="" />
         <div className={`${styles.priceCardDetails} p-5 lg:p-3 flex items-center justify-between flex-col`}>
           <h5 className="mb-2 text-xl 2xl:text-lg text-gray-900 xl:leading-tight xl:text-lg sm:text-xl">{title}</h5>
           <div>
