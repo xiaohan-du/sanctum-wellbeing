@@ -3,12 +3,16 @@
 interface PriceModalProps {
   toggleModal: () => void;
   title: string;
-  time: string;
-  price: string;
+  time1: string;
+  price1: string;
+  time2?: string;
+  price2?: string;
+  time3?: string;
+  price3?: string;
   description: string[];
 }
 
-export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time, price, description }) => {
+export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time1, price1, time2, price2, time3, price3, description }) => {
   return (
     <div aria-hidden="true" className="
       backdrop-blur 
@@ -52,19 +56,28 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
                   <span className="sr-only">Close modal</span>
                 </button>
               </h3>
-              <div className="flex p-4 flex-col sm:flex-row justify-start border-t w-full items-start rounded-b text-gray-600">
-                <p>{time}</p>
-                <p className="text-2xl xl:text-xl sm:ml-2 sm:text-base">{price}</p>
+              <div className="flex flex-row">
+                <div className="flex p-4 flex-col justify-start border-t w-full items-start rounded-b text-gray-600">
+                  <p>{time1}</p>
+                  <p className="text-2xl xl:text-xl sm:text-base">{price1}</p>
+                </div>
+                <div className="flex p-4 flex-col justify-start w-full items-start rounded-b text-gray-600">
+                  <p>{time2}</p>
+                  <p className="text-2xl xl:text-xl sm:text-base">{price2}</p>
+                </div>
+                <div className="flex p-4 flex-col justify-start w-full items-start rounded-b text-gray-600">
+                  <p>{time3}</p>
+                  <p className="text-2xl xl:text-xl sm:text-base">{price3}</p>
+                </div>
               </div>
             </div>
-
           </div>
           <div className="p-4 md:p-5 space-y-4">
             <p className="text-xl xl:text-base sm:text-sm leading-relaxed sm:leading-tight text-gray-800">
               {
                 description?.map((c, i) => {
                   return (
-                    <p key={i}>
+                    <p key={i} className="mt-2">
                       {c}
                     </p>
                   )
