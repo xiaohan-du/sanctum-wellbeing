@@ -3,12 +3,12 @@
 export const useOpeningHoursState = () => {
   const daysOfWeek = [
     { name: 'Sunday', openingHours: 'Closed' },
-    { name: 'Monday', openingHours: 'Closed' },
-    { name: 'Tuesday', openingHours: '9:30 AM - 3:00 PM' },
-    { name: 'Wednesday', openingHours: '9:30 AM - 3:00 PM' },
-    { name: 'Thursday', openingHours: '9:30 AM - 3:00 PM' },
-    { name: 'Friday', openingHours: '9:30 AM - 7:00 PM' },
-    { name: 'Saturday', openingHours: '8:00 AM - 12:00 PM' }
+    { name: 'Monday', openingHours: '8:30 AM - 1:00 PM' },
+    { name: 'Tuesday', openingHours: '8:30 AM - 1:00 PM' },
+    { name: 'Wednesday', openingHours: '8:30 AM - 3:30 PM' },
+    { name: 'Thursday', openingHours: '8:30 AM - 3:30 PM' },
+    { name: 'Friday', openingHours: '8:30 AM - 6:00 PM' },
+    { name: 'Saturday', openingHours: '8:30 AM - 1:00 PM' }
   ];
   const today = new Date();
   const currentDayOfWeek = today.getDay();
