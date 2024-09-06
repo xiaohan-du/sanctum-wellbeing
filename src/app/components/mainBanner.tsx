@@ -1,12 +1,12 @@
 import styles from './mainBanner.module.scss';
-import logo from '../static/images/logo.svg';
+import logo from '../static/images/logo-no-bg.png';
 import Image from 'next/image';
 
 export const MainBanner = () => {
   return (
     <nav className={`w-screen ${styles.mainBanner}`}>
       <div className={`${styles.main} xl:h-56 lg:h-48 sm:h-36 flex flex-row justify-center items-center m-auto`}>
-        <div className='pt-12 pb-4 -ml-8'>
+        <div className='pb-4 -ml-8'>
           <Image src={logo} alt="Logo" className='h-64 xl:h-56 lg:h-36 md:h-32 w-auto' />
         </div>
         <div className='flex flex-row sm:flex-col justify-center items-center'>
