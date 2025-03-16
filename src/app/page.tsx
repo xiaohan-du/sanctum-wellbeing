@@ -18,6 +18,7 @@ import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
 import { Ad } from './components/ad';
 import { adData } from './static/data/adData';
+import { giftVoucherData } from './static/data/giftVoucherData';
 import { PriceCardBox } from './components/priceCardBox';
 import { vtctRowData } from './static/data/vtctRowData';
  import { ImageRow } from './components/imageRow';
@@ -100,14 +101,13 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Gift Vouchers"
+            subtitle=' - Wondering what to get friends and loved ones for all those special occasions throughout the year? Then treat them to a perfect treatment!'
             bannerHeight='h-52 xl:h-56 md:h-96 sm:h-152'
             negativeTitleMargin='-mt-4 xl:-mt-8'
             imgUrl={massage}
-            content={[
-              "Wondering what to get friends and loved ones for all those special occasions throughout the year? Then treat them to a perfect treatment! ",
-              "Contact me on 07852 135375 or info@sanctumwellbeing.co.uk to buy a gift voucher, which will then be sent by post or digitally. "
-            ]}
+            content={[]}
           />
+          <Ad adData={giftVoucherData}/>
         </div>
 
         <div className='mb-16'>
