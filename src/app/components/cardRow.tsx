@@ -36,31 +36,36 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
   }, [cardRowData]);
 
   return (
-    <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-32`}>
-      {
-        cardRowData.map(({ tag, url, title, content, imgUrl }, index) => (
-          <a
-            key={index}
-            href={url}
-            className={`${styles.card} px-8 xl:px-4 sm:px-2 h-full flex flex-col justify-center items-center`}
-            data-id={tag}
-          >
-            {
-              title ? (
-                <h2 className='text-xl lg:text-base'>
-                  {title}
-                </h2>
-              ) : null
-            }
-            <p className='font-normal lg:text-sm md:text-xs'>{content}</p>
-            {
-              imgUrl ? (
-                <Image src={imgUrl} alt="Logo" className='h-32 xl:h-24 lg:h-16 md:h-20 md:w-20 w-auto' />
-              ) : null
-            }
-          </a>
-        ))
-      }
-    </div>
+    <>
+      <div className={`${styles.cardRow} flex flex-row justify-center items-center rounded-lg font-sans tracking-wide h-40 xl:h-36 lg:h-24 md:h-32`}>
+        {
+          cardRowData.map(({ tag, url, title, content, imgUrl }, index) => (
+            <a
+              key={index}
+              href={url}
+              className={`${styles.card} px-8 xl:px-4 sm:px-2 h-full flex flex-col justify-center items-center`}
+              data-id={tag}
+            >
+              {
+                title ? (
+                  <h2 className='text-xl lg:text-base'>
+                    {title}
+                  </h2>
+                ) : null
+              }
+              <p className='font-normal lg:text-sm md:text-xs'>{content}</p>
+              {
+                imgUrl ? (
+                  <Image src={imgUrl} alt="Logo" className='h-32 xl:h-24 lg:h-16 md:h-20 md:w-20 w-auto' />
+                ) : null
+              }
+            </a>
+          ))
+        }
+      </div>
+      <span className={`${styles.registeredOnly} text-lg block text-center mt-2 font-sans`}>
+        CNHC registered for Reflexology only
+      </span>
+    </>
   )
 }

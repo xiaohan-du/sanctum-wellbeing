@@ -1,7 +1,7 @@
 import handFeet from '../images/handfeet.jpg';
 import foot from '../images/foot.png';
 import asian from '../images/asian.png';
-import forehead from '../images/forehead.png';
+import smile from '../images/backHands.png';
 import ladyCream from '../images/ladyCream.png';
 import whiteSheet from '../images/whiteSheet.png';
 import hotStone from '../images/hotStone.png';
@@ -46,20 +46,20 @@ export const priceCardData = [
     price2: '£85*',
     time3: '2 hours',
     price3: '£110*',
-    imgUrl: forehead,
+    imgUrl: ladyCream,
     description: ["‘Not just a facial’. A luxurious facial with massage with relaxation at the heart of this treatment. Indian head massage techniques, with head, face, neck, chest, arms, hand massage complete this blissful facial leaving your skin cleansed, hydrated, and refreshed.", 
     "* 90 minutes includes full back, neck and shoulder massage.", 
     "* 2 hours includes Feet Reflexology"]
   },
   {
-    title: 'Full body Swedish Massage',
+    title: 'Full body Massage',
     time1: '60 mins',
     price1: '£60',
     time2: '90 mins',
     price2: '£85',
     time3: '2 hours',
     price3: '£110*',
-    imgUrl: ladyCream,
+    imgUrl: smile,
     description: ["Ease away your aching muscles and slip into a blissful state of relaxation with this full body massage, tailored to your individual needs on the day. From gentle, medium to firm pressure catered uniquely for you.", 
     "* 2 hours includes Feet Reflexology"]
   },

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { PriceModal } from './priceModal';
 import btnStyles from './btn.module.scss';
-import styles from './priceCard.module.scss';
 
 interface IPriceCard {
   title: string;
@@ -26,7 +25,7 @@ export const PriceCard = ({ title, time1, price1, time2, price2, time3, price3, 
 
   return (
     <>
-      <div className="
+      <div className={`
         w-full
         font-sans 
         font-thin 
@@ -36,12 +35,13 @@ export const PriceCard = ({ title, time1, price1, time2, price2, time3, price3, 
         border-gray-200 
         rounded-lg 
         shadow-lg
-        h-fit
+        h-full
+        flex flex-col
         hover:shadow-2xl
-        hover:transition-shadow duration-300"
+        hover:transition-shadow duration-300`}
       >
         <Image className="rounded-t-lg h-56 xl:h-48 object-cover w-full" src={imgUrl} alt="" />
-        <div className={`${styles.priceCardDetails} p-5 lg:p-3 flex items-center justify-between flex-col`}>
+        <div className={'p-5 lg:p-3 flex items-center justify-between flex-col flex-grow'}>
           <h5 className="lg:min-h-[64px] md:min-h-[16px] mb-2 text-xl 2xl:text-base text-gray-900 xl:leading-tight xl:text-base sm:text-xl">{title}</h5>
           <div>
             <div className='flex flex-row justify-center'>
