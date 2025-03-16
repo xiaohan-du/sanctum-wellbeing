@@ -1,7 +1,7 @@
 import handFeet from '../images/handfeet.jpg';
 import foot from '../images/foot.png';
 import asian from '../images/asian.png';
-import smile from '../images/backHands.png';
+import backHands from '../images/backHands.png';
 import ladyCream from '../images/ladyCream.png';
 import whiteSheet from '../images/whiteSheet.png';
 import hotStone from '../images/hotStone.png';
@@ -59,7 +59,7 @@ export const priceCardData = [
     price2: '£85',
     time3: '2 hours',
     price3: '£110*',
-    imgUrl: smile,
+    imgUrl: backHands,
     description: ["Ease away your aching muscles and slip into a blissful state of relaxation with this full body massage, tailored to your individual needs on the day. From gentle, medium to firm pressure catered uniquely for you.", 
     "* 2 hours includes Feet Reflexology"]
   },
