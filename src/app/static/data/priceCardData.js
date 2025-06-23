@@ -5,7 +5,6 @@ import backHands from '../images/backHands.png';
 import ladyCream from '../images/ladyCream.png';
 import whiteSheet from '../images/whiteSheet.png';
 import hotStone from '../images/hotStone.png';
-import sportsMassage from '../images/sportsMassage.jpeg';
 
 export const priceCardData = [
   {
@@ -86,7 +85,7 @@ export const priceCardData = [
     price1: '£40',
     time2: '60 mins',
     price2: '£70',
-    imgUrl: sportsMassage,
+    imgUrl: hotStone,
     description: ["Designed to help you reach peak performance, reduce the risk of injury, and accelerate recovery. We offer personalised pre and post event massage, and maintenance massage. Tailored to meet the unique needs of athletes and active individuals, our expert techniques target specific muscle groups to improve flexibility, increase range of motion, and help alleviate pain. ", 
       "Immerse yourself in the soothing atmosphere of Sanctum Wellbeing, where our serene environment quiets the body and mind while you experience the transformative benefits of Sports Massage Therapy and Relaxation at the same time. I am committed to creating an unparalleled experience that not only promotes physical recovery but also nurtures mental well-being, stress reduction and relaxation."
     ]
