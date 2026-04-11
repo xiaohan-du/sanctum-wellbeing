@@ -1,5 +1,7 @@
 import cnhc from '../images/cnhc.jpeg';
 import aorLogo from '../images/aorLogo.jpeg';
+import vtct from '../images/vtct.png';
+import fht from '../images/fht.png';
 
 export const cardRowData = [
   {
@@ -22,5 +24,19 @@ export const cardRowData = [
     title: '',
     content: '',
     imgUrl: aorLogo
+  },
+  {
+    tag: 'vtct',
+    url: '',
+    title: '',
+    content: '',
+    imgUrl: vtct
+  },
+  {
+    tag: 'fht',
+    url: '',
+    title: '',
+    content: '',
+    imgUrl: fht
   }
 ];
