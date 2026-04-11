@@ -21,7 +21,7 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
         items-center 
         gap-x-6 
         overflow-hidden 
-        bg-gray-50 
+        bg-white 
         py-10
         w-screen
         justify-center
