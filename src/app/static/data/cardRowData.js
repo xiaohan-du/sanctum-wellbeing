@@ -26,17 +26,17 @@ export const cardRowData = [
     imgUrl: aorLogo
   },
   {
-    tag: 'vtct',
-    url: '',
-    title: '',
-    content: '',
-    imgUrl: vtct
-  },
-  {
     tag: 'fht',
     url: '',
     title: '',
     content: '',
     imgUrl: fht
+  },
+  {
+    tag: 'vtct',
+    url: '',
+    title: '',
+    content: '',
+    imgUrl: vtct
   }
 ];

@@ -37,9 +37,7 @@ export default function Home() {
             imgUrl={foot}
           />
         </div>
-        <div className='-mt-36 xl:-mt-32 lg:-mt-28 md:-mt-24 mb-16 z-10'>
-          <CardRow cardRowData={cardRowData} />
-        </div>
+        <CardRow cardRowData={cardRowData} />
 
         <div className='mb-16'>
           <Banner
