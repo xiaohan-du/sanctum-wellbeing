@@ -13,8 +13,6 @@ import back from './static/images/back.png';
 import foot from './static/images/foot.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
-import greyCream from './static/images/greyCream.png';
-import { lymphaticHomeBanner } from './static/data/lymphaticDrainagePage';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
 import { Ad } from './components/ad';
@@ -40,15 +38,6 @@ export default function Home() {
           />
         </div>
         <CardRow cardRowData={cardRowData} />
-
-        <div className="mb-16">
-          <Banner
-            title={lymphaticHomeBanner.title}
-            content={lymphaticHomeBanner.content}
-            imgUrl={greyCream}
-            cta={lymphaticHomeBanner.cta}
-          />
-        </div>
 
         <div className='mb-16'>
           <Banner
