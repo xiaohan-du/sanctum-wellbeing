@@ -8,8 +8,11 @@ interface IBanner {
   bannerHeight?: string;
   negativeTitleMargin?: string;
   imgUrl?: any;
+  imgAlt?: string;
   /** Renders to the right of the title (e.g. navigation control) */
   titleAside?: ReactNode;
+  /** Renders after body paragraphs (e.g. CTA link) */
+  afterContent?: ReactNode;
 }
 
 export const Banner = ({
@@ -19,7 +22,9 @@ export const Banner = ({
   bannerHeight,
   negativeTitleMargin,
   imgUrl,
+  imgAlt,
   titleAside,
+  afterContent,
 }: IBanner) => {
   return (
     <div
@@ -50,9 +55,11 @@ export const Banner = ({
               <div className="shrink-0 pt-0.5 sm:pt-1">{titleAside}</div>
             ) : null}
           </div>
-          <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
-            {subtitle}
-          </h1>
+          {subtitle ? (
+            <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
+              {subtitle}
+            </h1>
+          ) : null}
           {
             content?.map((c, i) => {
               return (
@@ -62,10 +69,11 @@ export const Banner = ({
               )
             })
           }
+          {afterContent}
         </div>
         {imgUrl ? (
           <div className='pr-12 md:pr-0 md:mb-2'>
-            <Image src={imgUrl} alt="photo" className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
+            <Image src={imgUrl} alt={imgAlt ?? 'photo'} className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
           </div>
         ) : null}
 
