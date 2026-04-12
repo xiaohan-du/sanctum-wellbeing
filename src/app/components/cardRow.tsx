@@ -113,7 +113,14 @@ export const CardRow = ({ cardRowData }: ICardRow) => {
               )
             }
             return (
-              <a key={index} href={url} className={cardClass} data-id={tag}>
+              <a
+                key={index}
+                href={url}
+                className={cardClass}
+                data-id={tag}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {body}
               </a>
             )
