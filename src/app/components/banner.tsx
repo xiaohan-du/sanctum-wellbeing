@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 
 interface IBanner {
   title?: string;
@@ -7,9 +8,24 @@ interface IBanner {
   bannerHeight?: string;
   negativeTitleMargin?: string;
   imgUrl?: any;
+  imgAlt?: string;
+  /** Renders to the right of the title (e.g. navigation control) */
+  titleAside?: ReactNode;
+  /** Renders after body paragraphs (e.g. CTA link) */
+  afterContent?: ReactNode;
 }
 
-export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMargin, imgUrl }: IBanner) => {
+export const Banner = ({
+  title,
+  subtitle,
+  content,
+  bannerHeight,
+  negativeTitleMargin,
+  imgUrl,
+  imgAlt,
+  titleAside,
+  afterContent,
+}: IBanner) => {
   return (
     <div
       className={`
@@ -21,20 +37,29 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
         items-center 
         gap-x-6 
         overflow-hidden 
-        bg-gray-50 
+        bg-white 
         py-10
         w-screen
         justify-center
         font-sans`}
     >
-      <div className={`${negativeTitleMargin} flex flex-row md:flex-col-reverse items-center 2xl:max-w-6xl xl:max-w-5xl lg:max-w-3xl md:max-w-lg sm:max-w-sm`}>
+      <div
+        className={`${negativeTitleMargin ?? ''} flex flex-row md:flex-col-reverse items-center 2xl:max-w-6xl xl:max-w-5xl lg:max-w-3xl md:max-w-lg sm:max-w-sm`.trim()}
+      >
         <div className="max-w-6xl flex flex-col flex-wrap items-start gap-x-4 gap-y-2 px-12 sm:px-8">
-          <h1 className='text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-3xl'>
-            {title}
-          </h1>
-          <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
-            {subtitle}
-          </h1>
+          <div className="flex w-full flex-wrap items-start justify-between gap-3 gap-y-2">
+            <h1 className="min-w-0 flex-1 text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-3xl">
+              {title}
+            </h1>
+            {titleAside ? (
+              <div className="shrink-0 pt-0.5 sm:pt-1">{titleAside}</div>
+            ) : null}
+          </div>
+          {subtitle ? (
+            <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
+              {subtitle}
+            </h1>
+          ) : null}
           {
             content?.map((c, i) => {
               return (
@@ -44,10 +69,11 @@ export const Banner = ({ title, subtitle, content, bannerHeight, negativeTitleMa
               )
             })
           }
+          {afterContent}
         </div>
         {imgUrl ? (
           <div className='pr-12 md:pr-0 md:mb-2'>
-            <Image src={imgUrl} alt="photo" className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
+            <Image src={imgUrl} alt={imgAlt ?? 'photo'} className='object-cover h-44 lg:h-36 sm:h-48 w-44 lg:w-36 sm:w-48 min-w-11 lg:min-w-9 sm:min-w-7 mr-1 rounded-full border-solid border-8 border-white' />
           </div>
         ) : null}
 

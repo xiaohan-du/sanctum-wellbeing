@@ -1,22 +1,22 @@
 export const priceRowData = [
   {
-    title: 'Reflexology',
+    title: 'Reflexology & Thai foot massage',
     time: '60 mins',
-    price: '£45'
+    price: '£60',
   },
   {
-    title: 'Reflexology (Hand or Feet)',
+    title: 'Reflexology & Thai foot massage',
     time: '30 mins',
-    price: '£30'
+    price: '£40',
   },
   {
     title: 'Indian Head Massage',
     time: '60 mins',
-    price: '£45'
+    price: '£60',
   },
   {
-    title: "‘The Ultimate’",
+    title: '‘The Ultimate’',
     time: '90 mins',
-    price: '£75'
-  }
+    price: '£90',
+  },
 ];

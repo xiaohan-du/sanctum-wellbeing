@@ -35,7 +35,6 @@ export const PriceCard = ({ title, time1, price1, time2, price2, time3, price3, 
         border-gray-200 
         rounded-lg 
         shadow-lg
-        h-full
         flex flex-col
         hover:shadow-2xl
         hover:transition-shadow duration-300`}
