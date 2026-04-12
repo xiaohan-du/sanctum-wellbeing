@@ -21,11 +21,15 @@ import { giftVoucherData } from './static/data/giftVoucherData';
 import { PriceCardBox } from './components/priceCardBox';
 import { priceCardData } from './static/data/priceCardData'
 import { LymphaticPromoBanner } from './components/lymphaticPromoBanner';
+import { BackToTop } from './components/backToTop';
 
 export default function Home() {
   return (
     <>
-      <main className={`${styles.main} px-8 max-w-screen-xl font-serif font-thin tracking-normal sm:px-4`}>
+      <main
+        id="top"
+        className={`${styles.main} px-8 max-w-screen-xl font-serif font-thin tracking-normal sm:px-4`}
+      >
         <MainBanner />
         <ContactRow />
         <Ad adData={adData}/>
@@ -109,6 +113,7 @@ export default function Home() {
           <ReviewBanner reviewData={reviewData} />
         </div>
         <OpeningHours />
+        <BackToTop />
         <Footer />
       </main>
     </>

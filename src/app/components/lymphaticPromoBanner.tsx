@@ -25,7 +25,7 @@ export const LymphaticPromoBanner = () => {
       <div className="flex flex-row md:flex-col-reverse items-center 2xl:max-w-6xl xl:max-w-5xl lg:max-w-3xl md:max-w-lg sm:max-w-sm px-4">
         <div className="max-w-6xl flex flex-col flex-wrap items-start gap-x-4 gap-y-3 px-8 sm:px-4">
           <h2 className="text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-2xl">
-            Lymphatic Drainage Massage in Cardiff
+            Lymphatic Drainage Massage
           </h2>
           <p className="text-lg xl:text-base lg:text-sm sm:text-base leading-6 text-gray-900">
             If you&apos;re feeling bloated, sluggish, or holding onto excess fluid, lymphatic drainage
