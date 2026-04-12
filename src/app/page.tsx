@@ -57,12 +57,13 @@ export default function Home() {
 
         <div className='mb-16'>
           <Banner
-            title="Events - Corporate and Social"
+            title="Corporate Wellbeing"
             imgUrl={back}
             content={[
-              "Are you organising an event or would like to arrange a bespoke wellbeing day for friends/family or team building event for your workforce? Can you see the signs of stress in the workplace and would like to help? Would you like to help optimise employee’s wellbeing?",
-              '"Sanctum Wellbeing in the Workplace Days" are onsite visits offering complementary therapies that can be arranged to suit your business requirements. ',
-              "If you would like further information on Sanctum Wellbeing in the Workplace Days please do not hesitate to get in touch and we can discuss the day in further detail and your requirements. Contact Louise on 07852 135375 or info@sanctumwellbeing.co.uk."
+              'I also offer on-site treatments for businesses across Cardiff and surrounding areas.',
+              'Corporate wellbeing sessions are a great way to support your team—helping to reduce stress, ease physical tension, and improve overall morale and productivity.',
+              'Treatments can be tailored to your workplace, with flexible options to suit your team and schedule.',
+              'If you’re looking to bring wellbeing into your workplace, get in touch to discuss your requirements.',
             ]}
           />
         </div>
@@ -72,23 +73,28 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
-            negativeTitleMargin='-mt-224 md:-mt-304 sm:-mt-480'
-            bannerHeight='h-248 md:h-328 sm:h-504'
+            negativeTitleMargin='-mt-224 md:-mt-304 sm:-mt-520'
+            bannerHeight='h-248 md:h-328 sm:h-536'
             content={[]}
           />
         </div>
-        <div className='-mt-232 md:-mt-312 sm:-mt-488 mb-16 z-10'>
+        <div className='-mt-232 md:-mt-312 sm:-mt-528 mb-16 z-10'>
           <PriceCardBox priceCardData={priceCardData}/>
         </div>
 
         <div className='mb-16'>
           <Banner
             title="Gift Vouchers"
-            subtitle=' - Wondering what to get friends and loved ones for all those special occasions throughout the year? Then treat them to a perfect treatment!'
-            bannerHeight='h-52 xl:h-56 md:h-96 sm:h-152'
+            bannerHeight='h-auto'
             negativeTitleMargin='-mt-4 xl:-mt-8'
             imgUrl={massage}
-            content={[]}
+            content={[
+              'Looking for a thoughtful gift that truly makes a difference?',
+              'Sanctum Wellbeing gift vouchers are perfect for anyone who could benefit from time to relax, unwind, and feel their best.',
+              'Available for all treatments, including massage, reflexology, and lymphatic drainage, vouchers can be tailored to suit your needs.',
+              'Whether it’s for a birthday, special occasion, or simply to show someone you care, a treatment experience is a gift they’ll genuinely appreciate.',
+              'Purchase a gift voucher today or get in touch for more information.',
+            ]}
           />
           <Ad adData={giftVoucherData}/>
         </div>
