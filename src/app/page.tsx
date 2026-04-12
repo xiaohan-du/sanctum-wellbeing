@@ -20,6 +20,7 @@ import { adData } from './static/data/adData';
 import { giftVoucherData } from './static/data/giftVoucherData';
 import { PriceCardBox } from './components/priceCardBox';
 import { priceCardData } from './static/data/priceCardData'
+import { LymphaticPromoBanner } from './components/lymphaticPromoBanner';
 
 export default function Home() {
   return (
@@ -38,6 +39,8 @@ export default function Home() {
           />
         </div>
         <CardRow cardRowData={cardRowData} />
+
+        <LymphaticPromoBanner />
 
         <div className='mb-16'>
           <Banner
