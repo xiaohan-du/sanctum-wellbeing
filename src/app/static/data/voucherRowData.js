@@ -1,17 +1,17 @@
 export const voucherRowData = [
   {
-    title: 'Reflexology',
+    title: 'Reflexology & Thai foot massage',
     time: '60 mins',
-    price: '£45'
+    price: '£60',
   },
   {
     title: 'Indian Head Massage',
-    time: '45 mins',
-    price: '£40'
+    time: '60 mins',
+    price: '£60',
   },
   {
-    title: "‘The Ultimate’",
+    title: '‘The Ultimate’',
     time: '90 mins',
-    price: '£75'
-  }
+    price: '£90',
+  },
 ];
