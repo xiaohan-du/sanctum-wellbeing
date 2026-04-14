@@ -76,6 +76,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
+            note="Female only"
             negativeTitleMargin='-mt-224 md:-mt-304 sm:-mt-520'
             bannerHeight='h-248 md:h-328 sm:h-536'
             content={[]}

@@ -1,31 +1,46 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
-import { PriceModal } from './priceModal';
+import { PriceModal, type PriceTier } from './priceModal';
 import btnStyles from './btn.module.scss';
+
+function parsePounds(price: string): number {
+  const n = Number.parseFloat(price.replace(/[^0-9.]/g, ''));
+  return Number.isFinite(n) ? n : 0;
+}
+
+function formatFromPrice(tiers: PriceTier[]): string {
+  if (!tiers.length) return '';
+  const min = Math.min(...tiers.map((t) => parsePounds(t.price)));
+  const rounded = Math.round(min * 100) / 100;
+  return `£${rounded % 1 === 0 ? rounded : rounded.toFixed(2)}`;
+}
 
 interface IPriceCard {
   title: string;
-  time1: string;
-  price1: string;
-  time2?: string;
-  price2?: string;
-  time3?: string;
-  price3?: string;
+  tiers: PriceTier[];
   imgUrl?: any;
   description: string[];
 }
 
-export const PriceCard = ({ title, time1, price1, time2, price2, time3, price3, imgUrl, description }: IPriceCard) => {
+export const PriceCard = ({
+  title,
+  tiers,
+  imgUrl,
+  description,
+}: IPriceCard) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
   };
 
+  const fromPrice = formatFromPrice(tiers);
+
   return (
     <>
-      <div className={`
+      <div
+        className={`
         w-full
         font-sans 
         font-thin 
@@ -41,29 +56,36 @@ export const PriceCard = ({ title, time1, price1, time2, price2, time3, price3, 
       >
         <Image className="rounded-t-lg h-56 xl:h-48 object-cover w-full" src={imgUrl} alt="" />
         <div className={'p-5 lg:p-3 flex items-center justify-between flex-col flex-grow'}>
-          <h5 className="lg:min-h-[64px] md:min-h-[16px] mb-2 text-xl 2xl:text-base text-gray-900 xl:leading-tight xl:text-base sm:text-xl">{title}</h5>
-          <div>
-            <div className='flex flex-row justify-center'>
-              <p className="mb-3 font-normal text-gray-700">{time1}</p>
-              <p className="ml-3 font-normal text-gray-700">{price1}</p>
-            </div>
-            <div className='flex flex-row justify-center'>
-              <p className="mb-3 font-normal text-gray-700">{time2}</p>
-              <p className="ml-3 font-normal text-gray-700">{price2}</p>
-            </div>
-            <div className='flex flex-row justify-center'>
-              <p className="mb-3 font-normal text-gray-700">{time3}</p>
-              <p className="ml-3 font-normal text-gray-700">{price3}</p>
-            </div>
-            <button onClick={toggleModal} className={`${btnStyles.basic} ${btnStyles.view} w-full text-white font-medium rounded-lg text-lg px-5 py-2.5 text-center xl:text-sm`} type="button">
+          <div className="w-full text-center mb-1">
+            <h5 className="lg:min-h-[48px] md:min-h-[16px] mb-1 text-xl 2xl:text-base text-gray-900 xl:leading-tight xl:text-base sm:text-xl">
+              {title}
+            </h5>
+          </div>
+          <div className="w-full">
+            <p className="text-center mb-3">
+              <span className="text-sm font-normal text-gray-600">from </span>
+              <span className="text-2xl xl:text-xl font-normal text-gray-900 tabular-nums">
+                {fromPrice}
+              </span>
+            </p>
+            <button
+              onClick={toggleModal}
+              className={`${btnStyles.basic} ${btnStyles.view} w-full text-white font-medium rounded-lg text-lg px-5 py-2.5 text-center xl:text-sm mt-2`}
+              type="button"
+            >
               View Details
             </button>
           </div>
         </div>
       </div>
       {isModalVisible && (
-        <PriceModal toggleModal={toggleModal} title={title} price1={price1} time1={time1} price2={price2} time2={time2} price3={price3} time3={time3} description={description}/>
+        <PriceModal
+          toggleModal={toggleModal}
+          title={title}
+          tiers={tiers}
+          description={description}
+        />
       )}
     </>
-  )
-}
+  );
+};

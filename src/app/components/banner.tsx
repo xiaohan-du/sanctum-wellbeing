@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 
 interface IBanner {
   title?: string;
+  /** Short line directly under the title (e.g. “Female only”) */
+  note?: string;
   subtitle?: string;
   content?: string[];
   bannerHeight?: string;
@@ -17,6 +19,7 @@ interface IBanner {
 
 export const Banner = ({
   title,
+  note,
   subtitle,
   content,
   bannerHeight,
@@ -55,6 +58,11 @@ export const Banner = ({
               <div className="shrink-0 pt-0.5 sm:pt-1">{titleAside}</div>
             ) : null}
           </div>
+          {note ? (
+            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide w-full text-center">
+              {note}
+            </p>
+          ) : null}
           {subtitle ? (
             <h1 className='text-2xl xl:text-xl lg:text-lg md:text-base sm:text-xl italic'>
               {subtitle}

@@ -1,83 +1,173 @@
-import handFeet from '../images/handfeet.jpg';
-import asian from '../images/asian.png';
-import backHands from '../images/backHands.png';
 import ladyCream from '../images/ladyCream.png';
-import whiteSheet from '../images/whiteSheet.png';
+import asian from '../images/asian.png';
+import handFeet from '../images/handfeet.jpg';
+import foot from '../images/foot.png';
+import backHands from '../images/backHands.png';
+import sportsMassage from '../images/sportsMassage.jpeg';
 import hotStone from '../images/hotStone.png';
+import lymphatic from '../images/lymphatic.png';
+import whiteSheet from '../images/whiteSheet.png';
+import greyCream from '../images/greyCream.png';
 
 export const priceCardData = [
   {
-    title: 'Bliss facials',
-    time1: '60 mins',
-    price1: '£70',
-    time2: '90 mins',
-    price2: '£95',
-    time3: '2 hours',
-    price3: '£130',
+    title: 'Bliss Aromatherapy Facial',
+    tiers: [
+      {
+        label: 'Bliss Facial Aromatherapy',
+        time: '1 hour',
+        price: '£70',
+      },
+      {
+        label: 'Bliss Facial Aromatherapy IHM',
+        time: '1 hour 30 mins',
+        price: '£95',
+      },
+      {
+        label: 'Sheer Bliss Package IHM Reflex',
+        time: '2 hours',
+        price: '£130',
+      },
+    ],
     imgUrl: ladyCream,
     description: [
-      '‘Not just a facial’. A luxurious facial with massage with relaxation at the heart of this treatment. Indian head massage techniques, with head, face, neck, chest, arms, hand massage complete this blissful facial leaving your skin cleansed, hydrated, and refreshed.',
-      '* 90 minutes includes full back, neck and shoulder massage.',
-      '* 2 hours includes Feet Reflexology',
+      'Immerse yourself in a rejuvenating journey with our Bliss Facial Aromatherapy. This luxurious 60-minute treatment is expertly crafted for your unique skin needs, using bespoke aromatherapy blends and massage with relaxation at the heart of the experience.',
+      'Longer options build in Indian head massage techniques and reflexology where listed — see each duration above.',
     ],
   },
   {
-    title: 'Indian Head Massage',
-    time1: '60 mins',
-    price1: '£60',
+    title: 'Indian Head Massage 60 minutes',
+    tiers: [{ time: '1 hour', price: '£60' }],
     imgUrl: asian,
     description: [
-      'This incredibly relaxing treatment includes a full back, neck, shoulder massage then onto the head and scalp using a range of IHM techniques, focusing on massaging marma acupressure points along the face, head, scalp, neck. Leaving you in a Zen like state.',
+      'An ancient therapeutic practice focusing on acupressure points on the head, neck, and shoulders. At Sanctum Wellbeing this includes the full back, neck, shoulders, arms, face, and head, performed while you relax on a heated massage bed with oils — leaving you in a calmer, more grounded state.',
     ],
   },
   {
-    title: 'Reflexology & Thai foot massage',
-    time1: '30 mins',
-    price1: '£40',
-    time2: '60 mins',
-    price2: '£60',
+    title: 'Reflexology',
+    tiers: [
+      { label: 'Reflexology hands 30 mins', time: '30 mins', price: '£40' },
+      { label: 'Reflexology feet 30 mins', time: '30 mins', price: '£40' },
+      { label: 'Reflexology feet 60 mins', time: '1 hour', price: '£60' },
+      { label: 'Reflexology hands & feet 60 min', time: '1 hour', price: '£60' },
+    ],
     imgUrl: handFeet,
     description: [
-      'Reflexology is a super effective treatment for stress reduction, promoting deep relaxation and wellbeing, also great for aiding sleep. It is based on the theory that different reflex points on the feet, lower leg, and hands reflect different body systems and organs. Pressure is applied to reflex points to help the body relax and return to balance and calmness.',
-      'Thai foot massage blends reflexology, acupressure, and massage of the feet and lower legs to open the Thai Sen energy channels and help energy flow through the body — relieving muscular discomfort and energetic imbalance, invigorating and relaxing.',
+      'Reflexology is a complementary health therapy used to encourage relaxation and wellbeing. Pressure is applied to reflex points on the feet and/or hands to support balance and calm.',
     ],
   },
   {
-    title: 'Full body / sports / hot stones massage',
-    time1: '60 mins',
-    price1: '£75',
-    time2: '90 mins',
-    price2: '£110',
-    time3: '2 hours',
-    price3: '£135',
+    title: 'Thai Foot Massage',
+    tiers: [
+      { time: '30 mins', price: '£40' },
+      { time: '1 hour', price: '£60' },
+    ],
+    imgUrl: foot,
+    description: [
+      'A holistic practice with roots in Ayurvedic medicine and yoga, combining reflexology and acupressure on the feet and lower legs to open energy channels, ease muscular discomfort, and leave you both invigorated and relaxed.',
+    ],
+  },
+  {
+    title: 'Full Body Massage',
+    tiers: [
+      { label: 'Full Body Massage', time: '1 hour', price: '£75' },
+      { label: 'Full Body Massage', time: '1 hour 30 mins', price: '£110' },
+      {
+        label: 'Full Body Massage with Feet Reflexology',
+        time: '2 hours',
+        price: '£135',
+      },
+    ],
     imgUrl: backHands,
     description: [
-      'Full body massage: ease aching muscles and slip into relaxation with a treatment tailored to your needs — from gentle to firm pressure.',
-      'Sports massage: designed to support performance, reduce injury risk, and aid recovery, with techniques targeting specific muscle groups for flexibility and range of motion.',
-      'Hot stones: full-body massage with heated stones to ease stress, tension, and achy muscles and restore calm. * 2 hours includes feet Reflexology.',
+      'Ease away aching muscles and slip into relaxation with a full body massage tailored to your needs on the day — from gentle to firm pressure.',
+      'The 2-hour option includes feet reflexology.',
     ],
   },
   {
-    title: '‘The Ultimate’',
-    time1: '90 mins',
-    price1: '£90',
-    time2: '2 hours',
-    price2: '£120',
-    imgUrl: whiteSheet,
+    title: 'Sanctum Sports Massage',
+    tiers: [
+      { label: 'Sanctum Sports Massage', time: '30 mins', price: '£40' },
+      { label: 'Sanctum Sports Massage', time: '1 hour', price: '£75' },
+      { label: 'Sports Massage', time: '1 hour 30 mins', price: '£110' },
+      { label: 'Sanctum Sports Package', time: '2 hours', price: '£135' },
+    ],
+    imgUrl: sportsMassage,
     description: [
-      'A super stress busting treatment consisting of a full Indian Head Massage, back, neck, shoulders massage, arms, hands, face, head, finishing with feet Reflexology.',
-      '* 2 hour bespoke package includes legs, and focuses on wherever you need it most on the day. Ultimate relaxation. Complimentary face mask if required.',
+      'Designed to help you reach peak performance, reduce the risk of injury, and accelerate recovery. Bespoke pre- and post-event massage, and maintenance massage tailored to you.',
+      'The 90-minute option is deep tissue work on the areas that need it most — can be combined with reflexology or Indian head massage for a restorative finish.',
+      'The 2-hour package is 90 minutes of deep tissue for your most tense areas, followed by 30 minutes of reflexology or Indian head massage — ideal after hard training or events.',
     ],
   },
   {
-    title: 'Pregnancy Massage (pre / post natal)',
-    time1: '60 mins',
-    price1: '£75',
-    time2: '90 mins',
-    price2: '£110',
+    title: 'Sanctum Hot Stones Massage Therapy',
+    tiers: [
+      { label: 'Sanctum Hot Stones Massage Therapy', time: '1 hour', price: '£75' },
+      { label: 'Sanctum Hot Stone Massage', time: '1 hour 30 mins', price: '£110' },
+      {
+        label: 'Sanctum Hot Stones Body & Sole Package',
+        time: '2 hours',
+        price: '£135',
+      },
+    ],
     imgUrl: hotStone,
     description: [
-      'Gentle, supportive massage tailored for pregnancy and postpartum — easing tension, promoting comfort, and helping you relax in a calm, safe environment.',
+      'Full-body massage with heated stones to ease stress, tension, and achy muscles and restore calm. The 2-hour Body & Sole package includes feet reflexology.',
+    ],
+  },
+  {
+    title: 'Sanctum Lymphatic Reset',
+    tiers: [
+      {
+        label: 'Sanctum Lymphatic Reset',
+        time: '1 hour 30 mins',
+        price: '£120',
+      },
+      {
+        label: 'Targeted Lymphatic Sculpt',
+        time: '45 mins',
+        price: '£65',
+      },
+      {
+        label: 'Facial Lymphatic Drainage & Indian Head Techniques',
+        time: '45 mins',
+        price: '£65',
+      },
+    ],
+    imgUrl: lymphatic,
+    description: [
+      'Recommended for first-time clients: a 90-minute full-body sculpting treatment using specialised wooden tools.',
+      'Targeted Lymphatic Sculpt: focused lymphatic drainage for specific areas (abdomen, hips/thighs, lower legs/feet, facial, or arms).',
+      'Facial session: techniques to reduce puffiness and promote relaxation in the head, face, neck, and décolletage using Maderotherapy and cryo spoons.',
+    ],
+  },
+  {
+    title: 'The Bespoke 2 hour package',
+    tiers: [{ time: '2 hours', price: '£140' }],
+    imgUrl: whiteSheet,
+    description: [
+      'A bespoke 2-hour treatment tailored to your needs on the day. Choose from Indian Head Massage, full back, neck, shoulders, face, head, arms, hands, and feet reflexology. Have it all, skip some parts, or mix it up depending on how you feel — or relax and let Louise take the lead.',
+      'Complimentary face mask and foot scrub offered.',
+    ],
+  },
+  {
+    title: 'Sanctum Pregnancy Massage Pre or Post Natal',
+    tiers: [
+      {
+        label: 'Sanctum Pregnancy Massage Pre or Post Natal',
+        time: '1 hour',
+        price: '£75',
+      },
+      {
+        label: 'Sanctum Pre or Post Natal Pamper Package',
+        time: '1 hour 30 mins',
+        price: '£110',
+      },
+    ],
+    imgUrl: greyCream,
+    description: [
+      'Gentle, supportive massage tailored for pregnancy and postpartum.',
+      'The 90-minute pamper package includes a restorative massage to ease pain and tension, a complimentary face mask, and your choice of Indian Head Massage or reflexology with a rejuvenating foot scrub.',
     ],
   },
 ];
