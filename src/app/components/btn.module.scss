@@ -3,6 +3,8 @@
   color: white;
   background-image: linear-gradient(to right, #9089fc, #ff80b5);
   width: 20rem;
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: 0.5rem;
 }
 

@@ -70,7 +70,7 @@ export const PriceCard = ({
             </p>
             <button
               onClick={toggleModal}
-              className={`${btnStyles.basic} ${btnStyles.view} w-full text-white font-medium rounded-lg text-lg px-5 py-2.5 text-center xl:text-sm mt-2`}
+              className={`${btnStyles.basic} ${btnStyles.view} block mx-auto text-white font-medium rounded-lg text-lg px-5 py-2.5 text-center xl:text-sm mt-2`}
               type="button"
             >
               View Details
