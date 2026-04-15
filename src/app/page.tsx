@@ -8,7 +8,6 @@ import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { ContactRow } from './components/contactRow';
-import lady from './static/images/lady.png';
 import { Footer } from './components/footer';
 import { OpeningHours } from './components/openingHours';
 import { Ad } from './components/ad';
@@ -20,6 +19,7 @@ import { LymphaticPromoBanner } from './components/lymphaticPromoBanner';
 import { ReflexologyPromoBanner } from './components/reflexologyPromoBanner';
 import { CorporatePromoBanner } from './components/corporatePromoBanner';
 import { GiftVoucherPromoBanner } from './components/giftVoucherPromoBanner';
+import { HealthCashPlansPromoBanner } from './components/healthCashPlansPromoBanner';
 import { BackToTop } from './components/backToTop';
 
 export default function Home() {
@@ -62,16 +62,7 @@ export default function Home() {
 
         <GiftVoucherPromoBanner />
 
-        <div className='mb-16'>
-          <Banner
-            title="Health Cash Plans"
-            subtitle=' - Do you have a Health Shield , Simply Health, Medicash or similar health cash plan?'
-            imgUrl={lady}
-            content={[
-              "Depending or your policy and level of cover, you could be reimbursed the cost of treatments. Do check your policy or contact your provider first. Please contact me if you need further information.",
-            ]}
-          />
-        </div>
+        <HealthCashPlansPromoBanner />
 
         <div className='mb-4'>
           <ReviewBanner reviewData={reviewData} />
