@@ -92,6 +92,7 @@ export default function ReflexologyPage() {
           titleAside={
             <Link
               href="/"
+              scroll={false}
               className="
                 inline-flex items-center gap-2 rounded-full border border-[#9089fc]/35
                 bg-white/90 px-4 py-2 text-sm font-medium text-gray-800
