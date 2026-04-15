@@ -1,5 +1,9 @@
 'use client'
 
+import { useLayoutEffect, useState } from 'react';
+
+export const PRICE_MODAL_TRANSITION_MS = 700;
+
 export interface PriceTier {
   label?: string;
   time: string;
@@ -7,44 +11,77 @@ export interface PriceTier {
 }
 
 interface PriceModalProps {
-  toggleModal: () => void;
+  exiting: boolean;
+  onRequestClose: () => void;
   title: string;
   tiers: PriceTier[];
   description: string[];
 }
 
 export const PriceModal: React.FC<PriceModalProps> = ({
-  toggleModal,
+  exiting,
+  onRequestClose,
   title,
   tiers,
   description,
 }) => {
+  const [entered, setEntered] = useState(false);
+
+  useLayoutEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      setEntered(true);
+      return;
+    }
+    let cancelled = false;
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (!cancelled) setEntered(true);
+      });
+    });
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(id);
+    };
+  }, []);
+
+  const show = entered && !exiting;
+
   return (
     <div
       aria-modal="true"
       role="dialog"
       aria-labelledby="price-modal-title"
-      className="
-      backdrop-blur 
-      fixed 
-      inset-0 
-      z-50 
-      justify-center 
-      items-center 
-      w-full 
+      className={`
+      backdrop-blur
+      fixed
+      inset-0
+      z-50
+      flex
+      justify-center
+      items-center
+      w-full
       h-full
       max-h-full
       overflow-y-auto
-      flex
       font-sans font-normal tracking-wide
-      bg-black/20"
-      onClick={toggleModal}
+      bg-black/20
+      transition-opacity duration-700 ease-out
+      motion-reduce:transition-none
+      ${show ? 'opacity-100' : 'opacity-0'}
+      `.trim()}
+      onClick={onRequestClose}
     >
       <div
-        className="p-4 w-full max-w-4xl xl:max-w-3xl xl:max-w-2xl sm:max-w-sm max-h-full"
+        className={`
+        p-4 w-full max-w-4xl xl:max-w-3xl xl:max-w-2xl sm:max-w-sm max-h-full
+        transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+        motion-reduce:transition-none
+        ${show ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-[0.96]'}
+        `.trim()}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative bg-white rounded-lg shadow p-12 xl:p-8 sm:p-2">
+        <div className="relative bg-white rounded-lg shadow p-12 xl:p-8 sm:p-2 transform-gpu">
           <div className="flex items-start justify-start border-b rounded-t">
             <div className="w-full">
               <h3
@@ -67,7 +104,7 @@ export const PriceModal: React.FC<PriceModalProps> = ({
                   inline-flex 
                   justify-center 
                   items-center"
-                  onClick={toggleModal}
+                  onClick={onRequestClose}
                 >
                   <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />

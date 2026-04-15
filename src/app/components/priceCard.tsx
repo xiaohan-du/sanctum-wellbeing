@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
-import { PriceModal, type PriceTier } from './priceModal';
+import { PriceModal, PRICE_MODAL_TRANSITION_MS, type PriceTier } from './priceModal';
 import btnStyles from './btn.module.scss';
 
 function parsePounds(price: string): number {
@@ -29,10 +29,20 @@ export const PriceCard = ({
   imgUrl,
   description,
 }: IPriceCard) => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalExiting, setModalExiting] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
+  const closeModal = () => {
+    if (modalExiting) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setModalOpen(false);
+      return;
+    }
+    setModalExiting(true);
+    window.setTimeout(() => {
+      setModalOpen(false);
+      setModalExiting(false);
+    }, PRICE_MODAL_TRANSITION_MS);
   };
 
   const fromPrice = formatFromPrice(tiers);
@@ -69,7 +79,7 @@ export const PriceCard = ({
               </span>
             </p>
             <button
-              onClick={toggleModal}
+              onClick={() => setModalOpen(true)}
               className={`${btnStyles.basic} ${btnStyles.view} block mx-auto text-white font-medium rounded-lg text-lg px-5 py-2.5 text-center xl:text-sm mt-2`}
               type="button"
             >
@@ -78,9 +88,10 @@ export const PriceCard = ({
           </div>
         </div>
       </div>
-      {isModalVisible && (
+      {modalOpen && (
         <PriceModal
-          toggleModal={toggleModal}
+          exiting={modalExiting}
+          onRequestClose={closeModal}
           title={title}
           tiers={tiers}
           description={description}
