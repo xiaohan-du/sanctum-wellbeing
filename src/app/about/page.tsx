@@ -119,6 +119,7 @@ export default function AboutPage() {
             overflow-hidden rounded-[1.75rem]
             border-2 border-[#9089fc]/55
             bg-gradient-to-b from-[#faf8ff]/95 via-white to-[#fffafd]/90
+            px-8 py-10 sm:p-0
             shadow-[0_8px_40px_-12px_rgba(144,137,252,0.35),0_4px_16px_-8px_rgba(255,128,181,0.12)]
           "
         >
