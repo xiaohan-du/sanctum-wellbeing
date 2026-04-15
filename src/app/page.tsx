@@ -8,7 +8,6 @@ import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { ContactRow } from './components/contactRow';
-import corporate from './static/images/corporate.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
 import { Footer } from './components/footer';
@@ -21,6 +20,7 @@ import { priceCardData } from './static/data/priceCardData'
 import { AboutPromoBanner } from './components/aboutPromoBanner';
 import { LymphaticPromoBanner } from './components/lymphaticPromoBanner';
 import { ReflexologyPromoBanner } from './components/reflexologyPromoBanner';
+import { CorporatePromoBanner } from './components/corporatePromoBanner';
 import { BackToTop } from './components/backToTop';
 
 export default function Home() {
@@ -44,18 +44,7 @@ export default function Home() {
 
         <ReflexologyPromoBanner />
 
-        <div className='mb-16'>
-          <Banner
-            title="Corporate Wellbeing"
-            imgUrl={corporate}
-            content={[
-              'I also offer on-site treatments for businesses across Cardiff and surrounding areas.',
-              'Corporate wellbeing sessions are a great way to support your team—helping to reduce stress, ease physical tension, and improve overall morale and productivity.',
-              'Treatments can be tailored to your workplace, with flexible options to suit your team and schedule.',
-              'If you’re looking to bring wellbeing into your workplace, get in touch to discuss your requirements.',
-            ]}
-          />
-        </div>
+        <CorporatePromoBanner />
 
         
 
