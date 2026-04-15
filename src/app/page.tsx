@@ -8,7 +8,6 @@ import { ReviewBanner } from './components/reviewBanner';
 import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { ContactRow } from './components/contactRow';
-import hand from './static/images/hand.png';
 import corporate from './static/images/corporate.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
@@ -19,6 +18,7 @@ import { adData } from './static/data/adData';
 import { giftVoucherData } from './static/data/giftVoucherData';
 import { PriceCardBox } from './components/priceCardBox';
 import { priceCardData } from './static/data/priceCardData'
+import { AboutPromoBanner } from './components/aboutPromoBanner';
 import { LymphaticPromoBanner } from './components/lymphaticPromoBanner';
 import { ReflexologyPromoBanner } from './components/reflexologyPromoBanner';
 import { BackToTop } from './components/backToTop';
@@ -33,22 +33,8 @@ export default function Home() {
         <MainBanner />
         <ContactRow />
         <Ad adData={adData}/>
-        <div className='mb-16'>
-          <Banner
-            title="About Sanctum Wellbeing"
-            bannerHeight='h-auto min-h-[32rem] md:min-h-[30rem] sm:min-h-[72rem]'
-            negativeTitleMargin='-mt-4 sm:-mt-10'
-            imgUrl={hand}
-            content={[
-              'Sanctum Wellbeing was created as a calm, private space in Cardiff where you can truly switch off, reset, and feel looked after.',
-              'I’m Louise, a qualified massage therapist and reflexologist, specialising in treatments that support relaxation, recovery, and overall wellbeing. My approach is personalised—no two treatments are the same—because your body and what you need will change from one visit to the next.',
-              'Whether you’re dealing with stress, tension, hormonal changes, or simply need time to unwind, treatments are designed to help you feel lighter, more balanced, and more comfortable in your body.',
-              'I offer a range of therapies including massage, reflexology, and lymphatic drainage, combining techniques where needed to give you the most effective results.',
-              'Sanctum Wellbeing is based in Pontcanna Cardiff, offering a peaceful, one-to-one environment where your wellbeing is the focus.',
-            ]}
-          />
-        </div>
-        <div className='-mt-24 lg:-mt-20 sm:-mt-32 mb-16 z-10'>
+        <AboutPromoBanner />
+        <div className='-mt-24 lg:-mt-20 sm:-mt-8 mb-8 z-10'>
           <MediaRow mediaRowData={mediaRowData} />
         </div>
 
