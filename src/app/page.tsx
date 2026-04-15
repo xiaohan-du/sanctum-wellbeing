@@ -21,10 +21,12 @@ import { CorporatePromoBanner } from './components/corporatePromoBanner';
 import { GiftVoucherPromoBanner } from './components/giftVoucherPromoBanner';
 import { HealthCashPlansPromoBanner } from './components/healthCashPlansPromoBanner';
 import { BackToTop } from './components/backToTop';
+import { HomeScrollSession } from './components/homeScrollSession';
 
 export default function Home() {
   return (
     <>
+      <HomeScrollSession />
       <main
         id="top"
         className={`${styles.main} px-8 max-w-screen-xl font-serif font-thin tracking-normal sm:px-4`}
