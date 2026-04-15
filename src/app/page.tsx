@@ -76,12 +76,13 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Treatments and Prices"
-            negativeTitleMargin='-mt-224 md:-mt-304 sm:-mt-520'
-            bannerHeight='h-248 md:h-328 sm:h-536'
+            note="Female only"
+            negativeTitleMargin='-mt-248 md:-mt-328 sm:-mt-552'
+            bannerHeight='h-264 md:h-344 sm:h-568'
             content={[]}
           />
         </div>
-        <div className='-mt-232 md:-mt-312 sm:-mt-528 mb-16 z-10'>
+        <div className='-mt-256 md:-mt-336 sm:-mt-560 mb-16 z-10'>
           <PriceCardBox priceCardData={priceCardData}/>
         </div>
 
