@@ -116,9 +116,8 @@ export default function LymphaticDrainagePage() {
           className="
             relative w-full max-w-6xl mx-auto mb-10 mt-8 sm:mt-10
             overflow-hidden rounded-[1.75rem]
-            border border-[#e8e4ff]/80
+            border-2 border-[#9089fc]/55
             bg-gradient-to-b from-[#faf8ff]/95 via-white to-[#fffafd]/90
-            px-4 sm:px-8 py-8 sm:py-10
             shadow-[0_8px_40px_-12px_rgba(144,137,252,0.35),0_4px_16px_-8px_rgba(255,128,181,0.12)]
           "
         >
@@ -219,8 +218,7 @@ export default function LymphaticDrainagePage() {
               </p>
             </FancySection>
 
-            <div className="mt-2 rounded-2xl p-[1px] bg-gradient-to-br from-[#9089fc] via-[#a89ffc] to-[#ff80b5] shadow-[0_8px_32px_-8px_rgba(144,137,252,0.45)]">
-              <div className="rounded-2xl bg-gradient-to-b from-white to-[#faf8ff]/90 px-4 py-9 sm:px-10 sm:py-11 text-center">
+            <div className="mt-2 rounded-2xl bg-gradient-to-b from-white to-[#faf8ff]/90 px-4 py-9 sm:px-10 sm:py-11 text-center shadow-[0_8px_32px_-8px_rgba(144,137,252,0.45)]">
                 <div className="font-sans text-sm font-medium uppercase tracking-[0.2em] text-[#9089fc]/90 mb-2">
                   Next step
                 </div>
@@ -245,7 +243,6 @@ export default function LymphaticDrainagePage() {
                     Book now
                   </button>
                 </a>
-              </div>
             </div>
           </div>
         </article>
