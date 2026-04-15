@@ -7,7 +7,7 @@ import sportsMassage from '../images/sportsMassage.jpeg';
 import hotStone from '../images/hotStone.png';
 import lymphatic from '../images/lymphatic.png';
 import whiteSheet from '../images/whiteSheet.png';
-import greyCream from '../images/greyCream.png';
+import pregnancy from '../images/pregnancy.png';
 
 export const priceCardData = [
   {
@@ -164,7 +164,7 @@ export const priceCardData = [
         price: '£110',
       },
     ],
-    imgUrl: greyCream,
+    imgUrl: pregnancy,
     description: [
       'Gentle, supportive massage tailored for pregnancy and postpartum.',
       'The 90-minute pamper package includes a restorative massage to ease pain and tension, a complimentary face mask, and your choice of Indian Head Massage or reflexology with a rejuvenating foot scrub.',

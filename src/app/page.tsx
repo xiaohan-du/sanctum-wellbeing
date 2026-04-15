@@ -9,7 +9,7 @@ import { reviewData } from './static/data/reviewData';
 import { mediaRowData } from './static/data/mediaRowData';
 import { ContactRow } from './components/contactRow';
 import hand from './static/images/hand.png';
-import back from './static/images/back.png';
+import corporate from './static/images/corporate.png';
 import massage from './static/images/massage.png';
 import lady from './static/images/lady.png';
 import { Footer } from './components/footer';
@@ -61,7 +61,7 @@ export default function Home() {
         <div className='mb-16'>
           <Banner
             title="Corporate Wellbeing"
-            imgUrl={back}
+            imgUrl={corporate}
             content={[
               'I also offer on-site treatments for businesses across Cardiff and surrounding areas.',
               'Corporate wellbeing sessions are a great way to support your team—helping to reduce stress, ease physical tension, and improve overall morale and productivity.',
