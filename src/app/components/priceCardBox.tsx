@@ -16,7 +16,7 @@ interface IPriceCardBox {
 
 export const PriceCardBox = ({ priceCardData }: IPriceCardBox) => {
   return (
-    <div className="font-sans flex max-w-7xl 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-md flex-col md:flex-col items-center w-full bg-transparent rounded-xl">
+    <div className="font-sans flex max-w-7xl 2xl:max-w-5xl xl:max-w-4xl lg:max-w-2xl md:max-w-md sm:max-w-xs flex-col md:flex-col items-center w-full bg-transparent rounded-xl">
       <div className="grid grid-cols-5 gap-4 lg:gap-2 sm:gap-4 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full bg-transparent">
         {priceCardData.map(({ title, tiers, imgUrl, description }, i) => (
           <PriceCard
