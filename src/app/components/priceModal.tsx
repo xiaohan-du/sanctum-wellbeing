@@ -1,42 +1,97 @@
 'use client'
 
+import { useLayoutEffect, useState } from 'react';
+
+export const PRICE_MODAL_TRANSITION_MS = 700;
+
+export interface PriceTier {
+  label?: string;
+  time: string;
+  price: string;
+}
+
 interface PriceModalProps {
-  toggleModal: () => void;
+  exiting: boolean;
+  onRequestClose: () => void;
   title: string;
-  time1: string;
-  price1: string;
-  time2?: string;
-  price2?: string;
-  time3?: string;
-  price3?: string;
+  tiers: PriceTier[];
   description: string[];
 }
 
-export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time1, price1, time2, price2, time3, price3, description }) => {
+export const PriceModal: React.FC<PriceModalProps> = ({
+  exiting,
+  onRequestClose,
+  title,
+  tiers,
+  description,
+}) => {
+  const [entered, setEntered] = useState(false);
+
+  useLayoutEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      setEntered(true);
+      return;
+    }
+    let cancelled = false;
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (!cancelled) setEntered(true);
+      });
+    });
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(id);
+    };
+  }, []);
+
+  const show = entered && !exiting;
+
   return (
-    <div aria-hidden="true" className="
-      backdrop-blur 
-      fixed 
-      top-0 
-      right-0 
-      left-0 
-      z-50 
-      justify-center 
-      items-center 
-      w-full 
-      md:inset-0 
+    <div
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="price-modal-title"
+      className={`
+      backdrop-blur
+      fixed
+      inset-0
+      z-50
+      flex
+      justify-center
+      items-center
+      w-full
       h-full
       max-h-full
-      flex
-      font-sans font-normal tracking-wide"
+      overflow-y-auto
+      font-sans font-normal tracking-wide
+      bg-black/20
+      transition-opacity duration-700 ease-out
+      motion-reduce:transition-none
+      ${show ? 'opacity-100' : 'opacity-0'}
+      `.trim()}
+      onClick={onRequestClose}
     >
-      <div className="p-4 w-full max-w-4xl xl:max-w-3xl xl:max-w-2xl sm:max-w-sm max-h-full">
-        <div className="relative bg-white rounded-lg shadow p-12 xl:p-8 sm:p-2">
+      <div
+        className={`
+        p-4 w-full max-w-4xl xl:max-w-3xl xl:max-w-2xl sm:max-w-sm max-h-full
+        transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+        motion-reduce:transition-none
+        ${show ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-[0.96]'}
+        `.trim()}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative bg-white rounded-lg shadow p-12 xl:p-8 sm:p-2 transform-gpu">
           <div className="flex items-start justify-start border-b rounded-t">
             <div className="w-full">
-              <h3 className="text-4xl xl:text-3xl sm:text-xl flex w-full justify-between p-4 font-semibold text-gray-900">
-                <span className="w-4/5">{title}</span>
-                <button type="button" className="
+              <h3
+                id="price-modal-title"
+                className="text-4xl xl:text-3xl sm:text-xl flex w-full justify-between p-4 font-semibold text-gray-900"
+              >
+                <span className="w-4/5 pr-2">{title}</span>
+                <button
+                  type="button"
+                  className="
                   text-gray-400 
                   bg-gray-200 
                   hover:text-gray-900 
@@ -45,10 +100,11 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
                   w-10
                   h-10
                   ms-auto 
+                  shrink-0
                   inline-flex 
                   justify-center 
                   items-center"
-                  onClick={toggleModal}
+                  onClick={onRequestClose}
                 >
                   <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -56,38 +112,37 @@ export const PriceModal: React.FC<PriceModalProps> = ({ toggleModal, title, time
                   <span className="sr-only">Close modal</span>
                 </button>
               </h3>
-              <div className="flex flex-row">
-                <div className="flex p-4 flex-col justify-start border-t w-full items-start rounded-b text-gray-600">
-                  <p>{time1}</p>
-                  <p className="text-2xl xl:text-xl sm:text-base">{price1}</p>
-                </div>
-                <div className="flex p-4 flex-col justify-start w-full items-start rounded-b text-gray-600">
-                  <p>{time2}</p>
-                  <p className="text-2xl xl:text-xl sm:text-base">{price2}</p>
-                </div>
-                <div className="flex p-4 flex-col justify-start w-full items-start rounded-b text-gray-600">
-                  <p>{time3}</p>
-                  <p className="text-2xl xl:text-xl sm:text-base">{price3}</p>
-                </div>
+              <div className="flex flex-col gap-3 p-4 border-t">
+                {tiers.map((tier, i) => (
+                  <div
+                    key={i}
+                    className="rounded-lg border border-gray-100 bg-gray-50/80 px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
+                  >
+                    <div>
+                      {tier.label ? (
+                        <p className="text-sm font-semibold text-gray-900">{tier.label}</p>
+                      ) : null}
+                      <p className="text-gray-600 text-sm sm:text-base">{tier.time}</p>
+                    </div>
+                    <p className="text-2xl xl:text-xl sm:text-base font-normal text-gray-900 shrink-0">
+                      {tier.price}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
           <div className="p-4 md:p-5 space-y-4">
-            <p className="text-xl xl:text-base sm:text-sm leading-relaxed sm:leading-tight text-gray-800">
-              {
-                description?.map((c, i) => {
-                  return (
-                    <p key={i} className="mt-2">
-                      {c}
-                    </p>
-                  )
-                })
-              }
-            </p>
+            <div className="text-xl xl:text-base sm:text-sm leading-relaxed sm:leading-tight text-gray-800">
+              {description?.map((c, i) => (
+                <p key={i} className="mt-2 first:mt-0">
+                  {c}
+                </p>
+              ))}
+            </div>
           </div>
-
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
