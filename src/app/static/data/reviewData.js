@@ -6,11 +6,53 @@ export const reviewData = [
     isDecorate: true
   },
   {
-    name: 'Louise Stephens',
-    content: 'Louise was fantastic. From start to finish she was professional, thorough and kind. Her energy was lovely and very calming. Her Indian head massage was the perfect amount of firmness for an effective treatment. I left in the most wonderful state of relaxation. Thank you so much ❤️',
+    name: 'Marie James',
+    content: 'Simply amazing! I was a bit of a newbie to massage treatments, but Louise immediately put me at ease and made me feel welcome. The whole experience was very tranquil and soothing, and I left feeling calm and relaxed.',
     rating: 5,
     isDecorate: false,
-    linkUrl: 'https://goo.gl/maps/PtHF1WLdZUEX4osN6'
+    linkUrl: 'https://maps.app.goo.gl/mhVUoiEZyAm5Mmi48'
+  },
+  {
+    name: 'Liz Burge',
+    content: 'Always love my treatment with Louise at Sanctum. I always leave feeling relaxed and chilled, and every session is a little different in the best way. Louise is so friendly and welcoming.',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/VoR8crwYHDPvYAa18'
+  },
+  {
+    name: 'Sarah-Jayne Porsmoguer',
+    content: 'I had Indian Head Massage with Hot Stones and absolutely loved it. The room was welcoming, comfortable, and immaculate, and the treatment was wonderful. Already trying to decide what to book next month!',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/mtEk3o3McdvUhbGn9'
+  },
+  {
+    name: 'Gemma Cole',
+    content: 'I had a full body massage with Lou and it was amazing from start to finish. She put me at ease straight away, the room was calm and relaxing, and I left feeling incredible with my aches and pains gone.',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/wewWLB4gpaYU2vNN7'
+  },
+  {
+    name: 'lisa simon',
+    content: 'If you are looking to feel completely relaxed and de-stress, I couldn\'t recommend Louise more. Her two-hour treatment is hands down the best massage I have ever had.',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/uBGpTd7A2eBBELzq6'
+  },
+  {
+    name: 'Lauren King',
+    content: 'Louise has become a staple in our wellbeing programme and creates a relaxing environment in a busy office. Everyone who took part felt genuinely refreshed, and the treatments helped ease tension from long hours at desks.',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/RsVyRmDCibx4jyR26'
+  },
+  {
+    name: 'Bex Green',
+    content: 'My Indian head massage with Louise was absolutely wonderful. From the moment I arrived, she made me feel so cared for and at ease. I left feeling relaxed and refreshed. Highly recommend to anyone looking to unwind and treat themselves to real, restorative care.',
+    rating: 5,
+    isDecorate: false,
+    linkUrl: 'https://maps.app.goo.gl/6XiLnyxK5HuR21G97'
   },
   {
     name: 'Stewart Riddle',
