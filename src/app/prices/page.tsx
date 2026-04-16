@@ -77,7 +77,7 @@ export default function PricesPage() {
           />
 
           <div className="relative z-[1] space-y-8">
-            <div className="rounded-2xl border border-white/80 bg-white/85 backdrop-blur-sm px-4 py-6 sm:px-7 sm:py-7">
+            <div className="rounded-2xl border border-white/80 bg-white/85 backdrop-blur-sm px-8 py-6 sm:px-7 sm:py-7">
               <div className="font-sans text-lg sm:text-base leading-7 text-gray-800 space-y-3">
                 <p>
                   Tap a treatment to view the available durations and prices. If you&apos;re not
@@ -86,7 +86,7 @@ export default function PricesPage() {
               </div>
             </div>
 
-            <div className="px-4 flex justify-center sm:px-0">
+            <div className="px-8 flex justify-center sm:px-0">
               <PriceCardBox priceCardData={priceCardData} />
             </div>
 
