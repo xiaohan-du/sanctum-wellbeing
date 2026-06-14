@@ -10,9 +10,9 @@ import { Banner } from '../components/banner';
 import btnStyles from '../components/btn.module.scss';
 import lady from '../static/images/lady.png';
 import { BackToTop } from '../components/backToTop';
+import { enquiriesMail } from '../static/data/contactData';
 
-const ENQUIRIES_MAIL =
-  'mailto:info@sanctumwellbeing.co.uk?subject=Health%20cash%20plan%20enquiry';
+const ENQUIRIES_MAIL = enquiriesMail('Health cash plan enquiry');
 
 export const metadata: Metadata = {
   title: 'Health Cash Plans | Sanctum Wellbeing, Cardiff',
