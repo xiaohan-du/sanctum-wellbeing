@@ -7,10 +7,11 @@ import { ContactRow } from '../components/contactRow';
 import { Footer } from '../components/footer';
 import { OpeningHours } from '../components/openingHours';
 import { Banner } from '../components/banner';
-import btnStyles from '../components/btn.module.scss';
 import massage from '../static/images/massage.png';
 import { BackToTop } from '../components/backToTop';
-import { giftVoucherData } from '../static/data/giftVoucherData';
+import { enquiriesMail, PHONE_TEL } from '../static/data/contactData';
+
+const GIFT_VOUCHER_MAIL = enquiriesMail('Gift voucher enquiry');
 
 export const metadata: Metadata = {
   title: 'Gift Vouchers | Sanctum Wellbeing, Cardiff',
@@ -154,14 +155,6 @@ export default function GiftVouchersPage() {
               </p>
             </FancySection>
 
-            <FancySection>
-              <SectionTitle>How to buy</SectionTitle>
-              <p>
-                Purchase a gift voucher online, or get in touch for more information if you&apos;d
-                like help choosing the right option.
-              </p>
-            </FancySection>
-
             <div className="mt-2 rounded-2xl bg-gradient-to-b from-white to-[#faf8ff]/90 px-4 py-9 sm:px-10 sm:py-11 text-center shadow-[0_8px_32px_-8px_rgba(144,137,252,0.45)]">
                 <div className="font-sans text-sm font-medium uppercase tracking-[0.2em] text-[#9089fc]/90 mb-2">
                   Next step
@@ -170,30 +163,27 @@ export default function GiftVouchersPage() {
                   Buy a gift voucher
                 </h2>
                 <p className="font-sans text-lg sm:text-base leading-7 text-gray-600 mb-9 max-w-xl mx-auto">
-                  Purchase securely through Fresha, or email if you have questions.
+                  Call or email me to buy a gift voucher. I&apos;ll help you choose the right
+                  treatment and amount, arrange payment, and send your voucher by email or post.
                 </p>
-                <a
-                  href={giftVoucherData.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full max-w-full"
-                >
-                  <button
-                    type="button"
-                    className={`${btnStyles.bookFluid} w-full font-sans font-semibold text-xl sm:text-2xl md:text-3xl shadow-lg`}
-                  >
-                    Buy gift vouchers
-                  </button>
-                </a>
-                <p className="font-sans text-sm text-gray-500 mt-6">
-                  Questions?{' '}
-                  <a
-                    href="mailto:info@sanctumwellbeing.co.uk"
-                    className="font-medium text-[#9089fc] underline-offset-2 hover:underline"
-                  >
-                    info@sanctumwellbeing.co.uk
+                <div className="mx-auto flex max-w-md flex-row gap-3 justify-center">
+                  <a href={PHONE_TEL} className="flex-1 min-w-0">
+                    <button
+                      type="button"
+                      className="w-full rounded-lg border-0 bg-gradient-to-r from-[#9089fc] to-[#ff80b5] px-3 py-2.5 font-sans text-sm font-medium text-white shadow-md sm:px-4 sm:text-base"
+                    >
+                      Call
+                    </button>
                   </a>
-                </p>
+                  <a href={GIFT_VOUCHER_MAIL} className="flex-1 min-w-0">
+                    <button
+                      type="button"
+                      className="w-full rounded-lg border-0 bg-gradient-to-r from-[#9089fc] to-[#ff80b5] px-3 py-2.5 font-sans text-sm font-medium text-white shadow-md sm:px-4 sm:text-base"
+                    >
+                      Email
+                    </button>
+                  </a>
+                </div>
             </div>
           </div>
         </article>
