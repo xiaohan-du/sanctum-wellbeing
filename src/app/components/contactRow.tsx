@@ -6,22 +6,23 @@ import call from '../static/images/call.svg';
 import email from '../static/images/email.svg';
 import home from '../static/images/home.svg';
 import { redirectTo } from '../functions/redirectTo';
+import { EMAIL, EMAIL_MAIL, PHONE_DISPLAY, PHONE_TEL } from '../static/data/contactData';
 
 export const ContactRow = () => {
   return (
     <div className={`${styles.container} max-w-6xl xl:max-w-lg lg:max-w-md sm:max-w-xs font-sans flex xl:flex-col items-start w-screen justify-center bg-gray-50`}>
       <div className='flex flex-row sm:flex-col sm:items-start items-center max-w-screen-xl'>
         <button className={`${styles.element} text-base p-2 xl:p-1 m-2 xl:m-0`}
-          onClick={() => redirectTo('tel:+447852135375', false)}
+          onClick={() => redirectTo(PHONE_TEL, false)}
         >
           <Image src={call} alt="icons" className='h-12 lg:h-10 sm:h-8 w-auto mr-1' />
-          <span className='mr-1 text-xl lg:text-base sm:text-sm'>07852 135375</span>
+          <span className='mr-1 text-xl lg:text-base sm:text-sm'>{PHONE_DISPLAY}</span>
         </button>
         <button className={`${styles.element} text-base p-2 xl:p-1 m-2 xl:m-0`}
-          onClick={() => redirectTo('mailto:info@sanctumwellbeing.co.uk', false)}
+          onClick={() => redirectTo(EMAIL_MAIL, false)}
         >
           <Image src={email} alt="icons" className='h-12 lg:h-10 sm:h-8 w-auto mr-1' />
-          <span className='mr-1 text-xl lg:text-base sm:text-sm'>info@sanctumwellbeing.co.uk</span>
+          <span className='mr-1 text-xl lg:text-base sm:text-sm'>{EMAIL}</span>
         </button>
       </div>
       <button className={`${styles.element} text-base p-2 xl:p-1 m-2 xl:m-0`}

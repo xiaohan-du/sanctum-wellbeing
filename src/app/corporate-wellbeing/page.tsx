@@ -10,8 +10,9 @@ import { Banner } from '../components/banner';
 import btnStyles from '../components/btn.module.scss';
 import corporate from '../static/images/corporate.png';
 import { BackToTop } from '../components/backToTop';
+import { enquiriesMail } from '../static/data/contactData';
 
-const ENQUIRIES_MAIL = 'mailto:info@sanctumwellbeing.co.uk?subject=Corporate%20wellbeing%20enquiry';
+const ENQUIRIES_MAIL = enquiriesMail('Corporate wellbeing enquiry');
 
 export const metadata: Metadata = {
   title: 'Corporate Wellbeing | Sanctum Wellbeing, Cardiff',
