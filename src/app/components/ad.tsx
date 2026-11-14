@@ -8,6 +8,8 @@ interface IAd {
     content?: string;
     imgUrl?: any;
     url?: string;
+    voucherContent?: string;
+    voucherUrl?: string;
   };
 }
 
@@ -53,15 +55,20 @@ export const Ad = ({ adData }: IAd) => {
           ) : null
         }
       </div>
+      <div className="flex w-full flex-wrap items-center justify-center gap-4 px-4">
       {
         adData.content ? (
-          <a href={adData.url} target="_blank" rel="noopener noreferrer">
-            <button className={`${btnStyles.basic} ${btnStyles.book} font-sans font-medium text-3xl md:text-lg sm:text-md`}>
+          <a href={adData.url} target="_blank" rel="noopener noreferrer" className={`${btnStyles.basic} ${btnStyles.book} inline-flex items-center justify-center px-2 text-center font-sans font-medium text-3xl md:text-lg sm:text-md`}>
               {adData.content}
-            </button>
           </a>
         ) : null
       }
+      {adData.voucherContent && adData.voucherUrl ? (
+        <a href={adData.voucherUrl} target="_blank" rel="noopener noreferrer" className={`${btnStyles.basic} ${btnStyles.book} ${btnStyles.voucher} inline-flex items-center justify-center px-2 text-center font-sans font-medium text-3xl md:text-lg sm:text-md`}>
+          {adData.voucherContent}
+        </a>
+      ) : null}
+      </div>
     </div>
   )
 }
