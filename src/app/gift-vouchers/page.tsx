@@ -12,6 +12,8 @@ import { BackToTop } from '../components/backToTop';
 import { enquiriesMail, PHONE_TEL } from '../static/data/contactData';
 
 const GIFT_VOUCHER_MAIL = enquiriesMail('Gift voucher enquiry');
+const GIFT_VOUCHER_URL =
+  'https://www.fresha.com/book-now/sanctum-wellbeing-gq5cksyy/gift-cards?share&pId=1057120';
 
 export const metadata: Metadata = {
   title: 'Gift Vouchers | Sanctum Wellbeing, Cardiff',
@@ -163,9 +165,18 @@ export default function GiftVouchersPage() {
                   Buy a gift voucher
                 </h2>
                 <p className="font-sans text-lg sm:text-base leading-7 text-gray-600 mb-9 max-w-xl mx-auto">
-                  Call or email me to buy a gift voucher. I&apos;ll help you choose the right
-                  treatment and amount, arrange payment, and send your voucher by email or post.
+                  Buy a gift voucher online through Fresha, or call or email me for help choosing
+                  the right treatment and amount.
                 </p>
+                <a
+                  href={GIFT_VOUCHER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-auto mb-6 block max-w-md rounded-lg bg-gradient-to-r from-[#9089fc] to-[#ff80b5] px-3 py-2.5 font-sans text-sm font-medium text-white shadow-md sm:px-4 sm:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9089fc]"
+                >
+                  Buy a gift voucher online
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
                 <div className="mx-auto flex max-w-md flex-row gap-3 justify-center">
                   <a href={PHONE_TEL} className="flex-1 min-w-0">
                     <button
